@@ -14,10 +14,61 @@
     
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small" />
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Title" FontSize="Medium" />
+                <Entry Text="{Binding Item.Text}" d:Text="Enter Title" FontSize="Small" />
+                <Label Text="Description" FontSize="Medium" />
+                <Editor Text="{Binding Item.Description}" d:Text="Enter Information" FontSize="Small" Margin="0" />
+                <Label Text="Change Type" FontSize="Medium" />
+                <Picker Title="Select a monkey"
+                    TitleColor="Red">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Normal 5 vs 5</x:String>
+                            <x:String>Ranked 5 vs 5</x:String>
+                            <x:String>Normal 3 vs 3</x:String>
+                            <x:String>Ranked 3 vs 3</x:String>
+                            <x:String>Ranked Duo</x:String>
+                            <x:String>Howling Abyss</x:String>
+                            <x:String>Custom Scream</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Minimum Tier" FontSize="Medium" />
+                <Picker Title="All"
+                    TitleColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Iron</x:String>
+                            <x:String>Bronze</x:String>
+                            <x:String>Silver</x:String>
+                            <x:String>Gold</x:String>
+                            <x:String>Platinum</x:String>
+                            <x:String>Diamond</x:String>
+                            <x:String>Master</x:String>
+                            <x:String>Grand Master</x:String>
+                            <x:String>Challenger</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Maximum Tier" FontSize="Medium" />
+                <Picker Title="All"
+                    TitleColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Iron</x:String>
+                            <x:String>Bronze</x:String>
+                            <x:String>Silver</x:String>
+                            <x:String>Gold</x:String>
+                            <x:String>Platinum</x:String>
+                            <x:String>Diamond</x:String>
+                            <x:String>Master</x:String>
+                            <x:String>Grand Master</x:String>
+                            <x:String>Challenger</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
     
