@@ -4,12 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="League_of_players.Views.AboutPage"
+             x:Class="League_of_players.Views.ProfilePage"
              xmlns:vm="clr-namespace:League_of_players.ViewModels"
              Title="{Binding Title}">
+                
+    
     
     <ContentPage.BindingContext>
-        <vm:AboutViewModel />
+        <vm:ProfileViewModel />
     </ContentPage.BindingContext>
     
     <ContentPage.Resources>
@@ -25,13 +27,6 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    
-                </ContentView>
-            </StackLayout>
-        </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
 
@@ -120,7 +115,7 @@
 
 
                 <Button Margin="0,10,0,0" Text="Make profile public"
-                        Command="{Binding OpenWebCommand}"
+                        Command="{Binding GoCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
             </StackLayout>

@@ -72,8 +72,7 @@
         Font="Large"
         BorderWidth="1"
         HorizontalOptions="Center"
-        VerticalOptions="CenterAndExpand"
-        Clicked="OnButtonClicked" />
+        VerticalOptions="CenterAndExpand"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
