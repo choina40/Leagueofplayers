@@ -9,7 +9,7 @@
              Title="{Binding Title}">
 
 
-    <ContentPage.Resources>
+        <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="Accent">#96d1ff</Color>
@@ -17,121 +17,29 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
+    <Grid RowSpacing="1" ColumnSpacing="1">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="500" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="100" />
             <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Primary}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
-                <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand">
-                    <Label FontSize="20" HorizontalOptions="Start" HorizontalTextAlignment="End" Text="   View Teams"  />
-                </ContentView>
-            </StackLayout>
-        </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="10,10,10,10" Spacing="10">
-                <Label FontSize="22">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Today" FontAttributes="Bold" FontSize="22" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <BoxView Color="Accent"
-                                    WidthRequest="50"
-                                    HeightRequest="50"
-                                    HorizontalOptions="Start"/>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Looking for a support role" FontAttributes="Bold" FontSize="18" />
-                                <Span Text=" " />
-                                <Span Text="Team in need of a support for normal games"  FontSize="16"/>
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+            <ColumnDefinition Width="30" />
+           </Grid.ColumnDefinitions>
+        
+       
+        <Label Text="Today" Grid.Row="0" Grid.Column="0" FontSize="25" />
 
-                <BoxView Color="Accent"
-                                    WidthRequest="50"
-                                    HeightRequest="50"
-                                    HorizontalOptions="Start"/>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="ARAM Team" FontAttributes="Bold" FontSize="18" />
-                                <Span Text=" " />
-                                <Span Text="Looking for some quicky aram games for maximum fun."  FontSize="16"/>
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-
-                <BoxView Color="Accent"
-                                    WidthRequest="50"
-                                    HeightRequest="50"
-                                    HorizontalOptions="Start"/>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="First time player" FontAttributes="Bold" FontSize="18" />
-                                <Span Text=" " />
-                                <Span Text="Only started playing a week ago want a skilled player to teach me."  FontSize="16"/>
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-
-                <BoxView Color="Accent"
-                                    WidthRequest="50"
-                                    HeightRequest="50"
-                                    HorizontalOptions="Start"/>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="ADC/Support" FontAttributes="Bold" FontSize="18" />
-                                <Span Text=" " />
-                                <Span Text="Need a good combo of ADC and Support for my game."  FontSize="16"/>
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+        <BoxView Grid.Row="1" Grid.Column="0" Color="Red" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center" ></BoxView>
+        <Label Text="Looking for a support role.
+               Team in need for a support for normal games." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start"/>
 
 
-                <BoxView Color="Accent"
-                                    WidthRequest="50"
-                                    HeightRequest="50"
-                                    HorizontalOptions="Start"/>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Only play" FontAttributes="Bold" FontSize="18" />
-                                <Span Text=" " />
-                                <Span Text="I am binge gaming and will keep playing and never stopping."  FontSize="16"/>
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
 
-            </StackLayout>
-        </ScrollView>
+
+
     </Grid>
-
+    
 </ContentPage>
