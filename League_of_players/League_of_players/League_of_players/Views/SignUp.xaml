@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="League_of_players.Views.Page1">
+             x:Class="League_of_players.Views.SignUp">
     <ContentPage.Content>
         <StackLayout VerticalOptions="StartAndExpand">
             <Label Text="Username" />
@@ -13,7 +13,7 @@
             <Entry x:Name="passwordEntry" IsPassword="true" />
             <Label Text="Email address" />
             <Entry x:Name="emailEntry" />
-            <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" />
+            <Button Text="Sign Up"  />
             <Label x:Name="messageLabel" />
         </StackLayout>
     </ContentPage.Content>

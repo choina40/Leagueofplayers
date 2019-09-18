@@ -22,35 +22,50 @@
 
     <ScrollView Grid.Row="1">
         <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+            <BoxView Color="{StaticResource Accent}"
+                     </BoxView>
 
             <Grid>
+               
                 <BoxView Color="{StaticResource Accent}"
-         WidthRequest="150"
-         HeightRequest="150"></BoxView>
-                <Button Text="Click Me!"
-            Font="Large"
-            BorderWidth="1"
-            HorizontalOptions="Start"
-            VerticalOptions="CenterAndExpand"
-            Clicked="OnButtonClicked" />
-                
-                    
-                
-                   
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                <Label Margin="10, 20, 10, 10" Text="Players"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+                <Label Margin="10, 50, 10, 10" Text="Find individual players"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Start" />
+                <Button Margin="10,10,0,10" Text="View"
+                        Command="{Binding GoCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" HorizontalOptions="Start" VerticalOptions="End"/>
                 
             </Grid>
 
-            <BoxView Color="{StaticResource Accent}"
-         WidthRequest="150"
-         HeightRequest="150"
-         HorizontalOptions="Left"></BoxView>
 
-            <Button Text="Click Me!"
-            Font="Large"
-            BorderWidth="1"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
-            Clicked="OnButtonClicked" />
+            <Grid>
+                <BoxView Color="{StaticResource Accent}"
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                <Label Margin="10, 20, 10, 10" Text="Teams"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+                <Label Margin="10, 50, 10, 10" Text="Get paired with a team"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Start" />
+                <Button Margin="10,10,0,10" Text="View"
+                        Command="{Binding GoCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" HorizontalOptions="Start" VerticalOptions="End"/>
+                <Button Margin="110,10,0,10" Text="Create"
+                        Command="{Binding GoCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" HorizontalOptions="Start" VerticalOptions="End"/>
+            </Grid>
+
         </StackLayout>
     </ScrollView>
 
