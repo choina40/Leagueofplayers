@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:vm="clr-namespace:App1.ViewModels"
+             x:Class="League_of_players.Views.ViewTeams"
+             xmlns:vm="clr-namespace:League_of_players.ViewModels"
              Title="{Binding Title}">
 
 
