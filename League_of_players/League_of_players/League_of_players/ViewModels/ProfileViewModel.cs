@@ -12,6 +12,7 @@ namespace League_of_players.ViewModels
 
         public ProfileViewModel()
         {
+            Title = "Profile";
             GoCommand = new Command(go);
         }
 
