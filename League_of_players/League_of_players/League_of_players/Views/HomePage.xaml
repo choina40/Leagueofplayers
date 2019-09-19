@@ -22,9 +22,8 @@
 
     <ScrollView Grid.Row="1">
         <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-            <BoxView Color="{StaticResource Accent}"
-                     </BoxView>
 
+            
             <Grid>
                
                 <BoxView Color="{StaticResource Accent}"
