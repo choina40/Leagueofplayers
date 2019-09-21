@@ -16,5 +16,9 @@ namespace League_of_players.Views
         {
             InitializeComponent();
         }
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
+        }
     }
 }
