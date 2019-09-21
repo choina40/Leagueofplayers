@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace League_of_players.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Login : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        public Login()
+        public LoginPage()
         {
             InitializeComponent();
         }

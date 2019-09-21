@@ -24,7 +24,7 @@ namespace League_of_players
                 DependencyService.Register<MockDataStore>();
             else
                 DependencyService.Register<AzureDataStore>();
-            MainPage = new NavigationPage(new Login());
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

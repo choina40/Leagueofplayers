@@ -19,10 +19,19 @@
     <Compile Update="Views\AboutPage - Copy.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
+    <Compile Update="Views\FindTeamPage.xaml.cs">
+      <DependentUpon>FindTeamPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CreateTeamPage.xaml.cs">
+      <DependentUpon>CreateTeamPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\ViewTeams.xaml">
+    <EmbeddedResource Update="Views\FindTeamPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
