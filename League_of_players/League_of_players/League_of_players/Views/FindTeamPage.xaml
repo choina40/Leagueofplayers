@@ -9,37 +9,57 @@
              Title="{Binding Title}">
 
 
-        <ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="Accent">#96d1ff</Color>
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-
-    <Grid RowSpacing="1" ColumnSpacing="1">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="500" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="30" />
-           </Grid.ColumnDefinitions>
-        
-       
-        <Label Text="Today" Grid.Row="0" Grid.Column="0" FontSize="25" />
-
-        <BoxView Grid.Row="1" Grid.Column="0" Color="Red" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center" ></BoxView>
-        <Label Text="Looking for a support role.
-               Team in need for a support for normal games." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start"/>
+    
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="16,40,16,40">
+                <Grid RowSpacing="10" ColumnSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
 
+                    <Label Text="Today" Grid.Row="0" Grid.Column="0" FontSize="25" />
+
+                    <BoxView Grid.Row="1" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" ></BoxView>
+                    <StackLayout Grid.Row="1" Grid.Column="1">
+                        <Label FontSize="Large" FontAttributes="Bold" Text="Looking for a support role." ></Label>
+                        <Label FontSize="Medium" Text="Team in need for a support for normal games." ></Label>
+                    </StackLayout>
+                    <BoxView Grid.Row="2" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" ></BoxView>
+                    <StackLayout Grid.Row="2" Grid.Column="1">
+                        <Label FontSize="Large" FontAttributes="Bold" Text="Looking for a support role." ></Label>
+                        <Label FontSize="Medium" Text="Team in need for a support for normal games." ></Label>
+                    </StackLayout>
+
+                    <BoxView Grid.Row="3" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" ></BoxView>
+                    <StackLayout Grid.Row="3" Grid.Column="1">
+                        <Label FontSize="Large" FontAttributes="Bold" Text="Looking for a support role." ></Label>
+                        <Label FontSize="Medium" Text="Team in need for a support for normal games." ></Label>
+                    </StackLayout>
 
 
 
-    </Grid>
+
+
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
     
 </ContentPage>

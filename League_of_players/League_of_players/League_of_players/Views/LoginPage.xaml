@@ -4,12 +4,16 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="League_of_players.Views.LoginPage">
+             x:Class="League_of_players.Views.LoginPage"
+             NavigationPage.HasNavigationBar="false"
+             Title="Login">
+
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Sign Up" />
+        <ToolbarItem Text="Sign Up" Clicked="SignUp_Clicked"/>
     </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
-        <StackLayout VerticalOptions="StartAndExpand">
+        <StackLayout Spacing="20" Padding="16,40,16,40">
             <Label Text="Username" />
             <Entry x:Name="loginusernameEntry" Placeholder="username" />
             <Label Text="Password" />

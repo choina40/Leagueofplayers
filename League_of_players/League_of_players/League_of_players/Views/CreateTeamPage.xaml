@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="League_of_players.Views.CreateTeamPage"
-             Title="New Item">
+             Title="{Binding Title}">
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
@@ -13,8 +13,11 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="10">
-            <StackLayout Spacing="20" Padding="15">
+        <ScrollView>
+            
+       
+        <StackLayout Spacing="20" Padding="16,40,16,40">
+
                 <Label Text="Title" FontSize="Medium" />
                 <Entry Text="{Binding Item.Text}" d:Text="Enter Title" FontSize="Small" />
                 <Label Text="Description" FontSize="Medium" />
@@ -73,8 +76,9 @@
         BorderWidth="1"
         HorizontalOptions="Center"
         VerticalOptions="CenterAndExpand"/>
-            </StackLayout>
+
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
     
 </ContentPage>

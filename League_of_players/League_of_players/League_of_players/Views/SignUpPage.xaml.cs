@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace League_of_players.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class SignUpPage : ContentPage
     {
-        public LoginPage()
+        public SignUpPage()
         {
             InitializeComponent();
         }
@@ -20,9 +20,9 @@ namespace League_of_players.Views
         {
             Navigation.PushAsync(new HomePage());
         }
-        void SignUp_Clicked(object sender, System.EventArgs e)
+        void Login_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new SignUpPage());
+            Navigation.PushAsync(new LoginPage());
         }
     }
 }

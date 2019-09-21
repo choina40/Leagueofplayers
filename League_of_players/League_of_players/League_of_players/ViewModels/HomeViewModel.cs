@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace League_of_players.ViewModels
 {
@@ -13,14 +14,10 @@ namespace League_of_players.ViewModels
         public HomeViewModel()
         {
             Title = "New";
-            GoCommand = new Command(go);
+            
             
         }
 
-        private void go()
-        {
-            //NavigationService.NavigateToAsync<AboutViewModel>();
-        }
-        
+
     }
 }

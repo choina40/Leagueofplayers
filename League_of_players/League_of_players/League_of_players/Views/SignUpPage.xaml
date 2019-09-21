@@ -4,17 +4,24 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="League_of_players.Views.SignUp">
+             x:Class="League_of_players.Views.SignUpPage"
+             Title="Sign Up">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up" Clicked="Login_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
-        <StackLayout VerticalOptions="StartAndExpand">
+        <StackLayout Spacing="20" Padding="16,40,16,40">
             <Label Text="Username" />
             <Entry x:Name="usernameEntry" Placeholder="username" />
             <Label Text="Password" />
             <Entry x:Name="passwordEntry" IsPassword="true" />
-            <Label Text="Email address" />
-            <Entry x:Name="emailEntry" />
-            <Button Text="Sign Up"  />
+            <Label Text="Re-Password" />
+            <Entry x:Name="passwordEntry1" />
+            <Button Text="Sign Up" Clicked="Handle_Clicked" />
             <Label x:Name="messageLabel" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
+

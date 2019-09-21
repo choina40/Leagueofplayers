@@ -20,62 +20,60 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ScrollView Grid.Row="1">
-        <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-
-            
-            <Grid>
-               
-                <BoxView Color="{StaticResource Accent}"
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="16,40,16,40" Spacing="20" BackgroundColor="WhiteSmoke">
+                <Grid>
+                    <BoxView Color="White"
                      WidthRequest="150"
                      HeightRequest="150"></BoxView>
-                <Label Margin="10, 20, 10, 10" Text="Players"
+                    <Label Margin="10, 20, 10, 10" Text="Players"
                        FontSize="Large"
                        HorizontalTextAlignment="Start" 
                        FontAttributes="Bold"/>
-                <Label Margin="10, 50, 10, 10"
+                    <Label Margin="10, 50, 10, 10"
                        Text="Find individual players"
                        FontSize="Medium"
                        HorizontalTextAlignment="Start" />
-                <Button Margin="10,10,0,10" Text="View"
+                    <Button Margin="10,10,0,10" Text="View"
                         Command="{Binding GoCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
-                        Clicked="ViewTeam"/>
-                
-            </Grid>
+                        Clicked="ViewTeam_Clicked"/>
 
+                </Grid>
 
-            <Grid>
-                <BoxView Color="{StaticResource Accent}"
+                <Grid>
+                    <BoxView Color="White"
                      WidthRequest="150"
                      HeightRequest="150"></BoxView>
-                <Label Margin="10, 20, 10, 10" Text="Teams"
+                    <Label Margin="10, 20, 10, 10" Text="Teams"
                        FontSize="Large"
                        HorizontalTextAlignment="Start" 
                        FontAttributes="Bold"/>
-                <Label Margin="10, 50, 10, 10" Text="Get paired with a team"
+                    <Label Margin="10, 50, 10, 10" Text="Get paired with a team"
                        FontSize="Medium"
                        HorizontalTextAlignment="Start" />
-                <Button Margin="10,10,0,10" Text="View"
+                    <Button Margin="10,10,0,10" Text="View"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
-                        Clicked="ViewTeam"/>
-                <Button Margin="110,10,0,10" Text="Create"
+                        Clicked="ViewTeam_Clicked"/>
+                    <Button Margin="110,10,0,10" Text="Create"
                         Command="{Binding GoCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
-                        Clicked="CreateTeam"/>
-            </Grid>
-
-        </StackLayout>
-    </ScrollView>
+                        Clicked="CreateTeam_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
 
 
 
