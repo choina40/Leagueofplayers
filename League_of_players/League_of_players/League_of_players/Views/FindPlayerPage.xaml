@@ -7,9 +7,70 @@
              x:Class="League_of_players.Views.FindPlayerPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid RowSpacing="1" ColumnSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="30" />
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="Today" Grid.Row="0" Grid.Column="0" FontSize="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Label FontAttributes="Bold" Grid.Row="1" Grid.Column="1" FontSize="19">Jumboplop19</Label>
+                <BoxView Grid.Row="1" Grid.Column="0" Color="Red" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Fighting fighting fighting, for the win!" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                <Label FontAttributes="Bold" Grid.Row="2" Grid.Column="1" FontSize="19">Fish_fighter</Label>
+                <BoxView Grid.Row="2" Grid.Column="0" Color="Aqua" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Nothing takes more patience then fishing." Grid.Row="2" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                <Label FontAttributes="Bold" Grid.Row="3" Grid.Column="1" FontSize="19">Next_007</Label>
+                <BoxView Grid.Row="3" Grid.Column="0" Color="Green" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Inspried by the best and will become the best." Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                <Label FontAttributes="Bold" Grid.Row="4" Grid.Column="1" FontSize="19">sumoFatty</Label>
+                <BoxView Grid.Row="4" Grid.Column="0" Color="Purple" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Newbie support player." Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                <Label FontAttributes="Bold" Grid.Row="5" Grid.Column="1" FontSize="19">Powerplayer</Label>
+                <BoxView Grid.Row="5" Grid.Column="0" Color="Yellow" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Decent jungler, looking for people to play with." Grid.Row="5" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                <Label FontAttributes="Bold" Grid.Row="6" Grid.Column="1" FontSize="19">Zuma</Label>
+                <BoxView Grid.Row="6" Grid.Column="0" Color="Orange" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Strong mid laner, 75% win rate :)." Grid.Row="6" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                <Label FontAttributes="Bold" Grid.Row="7" Grid.Column="1" FontSize="19">Cloudie</Label>
+                <BoxView Grid.Row="7" Grid.Column="0" Color="Brown" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Support here, good at making calls." Grid.Row="7" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                <Label FontAttributes="Bold" Grid.Row="8" Grid.Column="1" FontSize="19">cema_slayer</Label>
+                <BoxView Grid.Row="8" Grid.Column="0" Color="Pink" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                <Label Text="                                                                         
+               Top player here." Grid.Row="8" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+            </Grid>
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
