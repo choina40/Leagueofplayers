@@ -21,40 +21,66 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="20" Padding="16,40,16,40">
-                <Grid RowSpacing="10" ColumnSpacing="1">
+                <Grid RowSpacing="1" ColumnSpacing="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100" />
                         <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="30" />
                     </Grid.ColumnDefinitions>
 
 
-                    <Label Text="Today" Grid.Row="0" Grid.Column="0" FontSize="25" />
+                    <Label Text="Today" Grid.Row="0" Grid.Column="0" FontSize="25" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-                    <BoxView Grid.Row="1" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" ></BoxView>
-                    <StackLayout Grid.Row="1" Grid.Column="1">
-                        <Label FontSize="Large" FontAttributes="Bold" Text="Looking for a support role." ></Label>
-                        <Label FontSize="Medium" Text="Team in need for a support for normal games." ></Label>
-                    </StackLayout>
-                    <BoxView Grid.Row="2" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" ></BoxView>
-                    <StackLayout Grid.Row="2" Grid.Column="1">
-                        <Label FontSize="Large" FontAttributes="Bold" Text="Looking for a support role." ></Label>
-                        <Label FontSize="Medium" Text="Team in need for a support for normal games." ></Label>
-                    </StackLayout>
+                    <Label FontAttributes="Bold" Grid.Row="1" Grid.Column="1" FontSize="19">ARAM Team.</Label>
+                    <BoxView Grid.Row="1" Grid.Column="0" Color="Red" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Looking for some quick aram games." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
-                    <BoxView Grid.Row="3" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" ></BoxView>
-                    <StackLayout Grid.Row="3" Grid.Column="1">
-                        <Label FontSize="Large" FontAttributes="Bold" Text="Looking for a support role." ></Label>
-                        <Label FontSize="Medium" Text="Team in need for a support for normal games." ></Label>
-                    </StackLayout>
+                    <Label FontAttributes="Bold" Grid.Row="2" Grid.Column="1" FontSize="19">Looking for a support role.</Label>
+                    <BoxView Grid.Row="2" Grid.Column="0" Color="Aqua" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Team in need for a support for normal games." Grid.Row="2" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
+                    <Label FontAttributes="Bold" Grid.Row="3" Grid.Column="1" FontSize="19">First time player.</Label>
+                    <BoxView Grid.Row="3" Grid.Column="0" Color="Green" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Just started recently need a skilled player to teach me." Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
+                    <Label FontAttributes="Bold" Grid.Row="4" Grid.Column="1" FontSize="19">ADC/Support.</Label>
+                    <BoxView Grid.Row="4" Grid.Column="0" Color="Purple" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Need a good combo of ADC and support for my game." Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
+                    <Label FontAttributes="Bold" Grid.Row="5" Grid.Column="1" FontSize="19">Only Play.</Label>
+                    <BoxView Grid.Row="5" Grid.Column="0" Color="Yellow" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               I am binge playing, gonna keep playing and never stopping." Grid.Row="5" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
+                    <Label FontAttributes="Bold" Grid.Row="6" Grid.Column="1" FontSize="19">Need a jungler.</Label>
+                    <BoxView Grid.Row="6" Grid.Column="0" Color="Orange" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Need a jungle to join my team." Grid.Row="6" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
+                    <Label FontAttributes="Bold" Grid.Row="7" Grid.Column="1" FontSize="19">Looking for a support.</Label>
+                    <BoxView Grid.Row="7" Grid.Column="0" Color="Brown" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               I main adc and need a support to support me." Grid.Row="7" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="8" Grid.Column="1" FontSize="19">Mid player</Label>
+                    <BoxView Grid.Row="8" Grid.Column="0" Color="Pink" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Need a decent mid player to join my team." Grid.Row="8" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
                 </Grid>
             </StackLayout>
