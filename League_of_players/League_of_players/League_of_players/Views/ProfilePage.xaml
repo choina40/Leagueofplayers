@@ -30,7 +30,7 @@
                      HeightRequest="100"
                      HorizontalOptions="Center"></BoxView>
 
-                <Label Text="DragonSlayer32"
+                <Label Text="{Binding Name}"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center" />
@@ -43,7 +43,7 @@
                    FontSize="Medium"
                    HorizontalTextAlignment="Center" />
 
-                <Label Text="Bio: I am a good player who steals kills"
+                <Label Text="{Binding Bio}"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center" />
 
