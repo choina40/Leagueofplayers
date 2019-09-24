@@ -18,7 +18,7 @@ namespace League_of_players.Views
         }
         void ViewPlayers_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new FindTeamPage());
+            Navigation.PushAsync(new FindPlayerPage());
         }
         void ViewTeam_Clicked(object sender, System.EventArgs e)
         {

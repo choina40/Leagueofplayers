@@ -37,6 +37,9 @@
         <Tab Title="Profile" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}"  />
         </Tab>
+        <Tab Title="Profile" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate local:TeamPage}" Route="team" />
+        </Tab>
     </TabBar>
 
     <!-- Optional Templates 

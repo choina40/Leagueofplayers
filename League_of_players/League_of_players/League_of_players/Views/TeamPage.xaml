@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="League_of_players.Views.TeamPage"
+             xmlns:vm="clr-namespace:League_of_players.ViewModels"
+             Title="{Binding Title}">
+                
+    <ContentPage.BindingContext>
+        <vm:TeamViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+
+                <BoxView Color="{StaticResource Accent}"
+                     WidthRequest="200"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"></BoxView>
+
+                <Label HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="Large" FontAttributes="Bold" Text="{Binding Name}"></Span>
+                            <Span Text=" "></Span>
+                            <Span FontSize="Medium" Text="{Binding Size, StringFormat='{0}'}"></Span>
+                            <Span FontSize="Medium" Text="/4"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Text="{Binding Description}"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center" />
+
+                <Button Margin="0,10,0,0" Text="Join Team"
+                        Command="{Binding NavButtonCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                    
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -6,9 +6,9 @@ using Xamarin.Forms;
 
 namespace League_of_players.ViewModels
 {
-    public class FindViewModel : BaseViewModel
+    public class FindPlayerViewModel : BaseViewModel
     {
-        public FindViewModel()
+        public FindPlayerViewModel()
         {
             Title = "Create";
         }
