@@ -39,6 +39,16 @@
                     </Label.FormattedText>
                 </Label>
 
+                <Label HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="Medium" Text="Mode:"></Span>
+                            <Span Text=" "></Span>
+                            <Span FontSize="Medium" Text="{Binding Mode}"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
                 <Label Text="{Binding Description}"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center" />

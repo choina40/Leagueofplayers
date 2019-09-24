@@ -10,7 +10,7 @@ namespace League_of_players.ViewModels
     {
         public FindPlayerViewModel()
         {
-            Title = "Create";
+            Title = "Players";
         }
     }
 }

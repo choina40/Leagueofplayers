@@ -4,15 +4,16 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using League_of_players.Models;
 
 namespace League_of_players.ViewModels
 {
     public class TeamViewModel : BaseViewModel
     {
-
+        public Team Team { get; set; }
         public TeamViewModel()
         {
-            Title = "Profile";
+            Title = "Team";
 
             NavButtonCommand = new Command(async () => await NavigateTo(), () => !IsBusy);
 
@@ -22,8 +23,7 @@ namespace League_of_players.ViewModels
 
         string name = "ProGamers101";
 
-       
-
+      
         public string Name
         {
             get => name; //same as get { return name; }
@@ -52,6 +52,19 @@ namespace League_of_players.ViewModels
             {
                 SetProperty(ref size, value); //MvvmHelpers Implementation
                 OnPropertyChanged(nameof(Size));
+            }
+        }
+
+        string mode = "Normal";
+
+
+        public string Mode
+        {
+            get => mode; //same as get { return name; }
+            set
+            {
+                SetProperty(ref mode, value); //MvvmHelpers Implementation
+                OnPropertyChanged(nameof(Mode));
             }
         }
 

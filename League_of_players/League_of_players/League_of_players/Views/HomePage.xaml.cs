@@ -16,11 +16,11 @@ namespace League_of_players.Views
         {
             InitializeComponent();
         }
-        void ViewPlayers_Clicked(object sender, System.EventArgs e)
+        void FindPlayer_Clicked(object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new FindPlayerPage());
         }
-        void ViewTeam_Clicked(object sender, System.EventArgs e)
+        void FindTeam_Clicked(object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new FindTeamPage());
         }
