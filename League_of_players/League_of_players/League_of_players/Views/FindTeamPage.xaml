@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="League_of_players.Views.FindTeamPage"
              xmlns:vm="clr-namespace:League_of_players.ViewModels"
-             Title="{Binding Title}">
+             Title="Team Details">
 
 
     <ContentPage.Resources>
@@ -16,26 +16,147 @@
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.BindingContext>
-        <vm:FindTeamViewModel/>
-    </ContentPage.BindingContext>
+    
     
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="20" Padding="16,40,16,40">
-                <ListView ItemsSource="{Binding Teams}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout Orientation="Horizontal">
-                                <BoxView Color="{Binding Color}"/>
-                                <StackLayout>
-                                    <Label Text="{Binding Name}"/>
-                                    <Label Text="{Binding Description}"/>
-                                </StackLayout>
-                            </StackLayout>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+
+                <Grid RowSpacing="1" 
+                      ColumnSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+
+                    <Label Text="Today" 
+                           Grid.Row="0" 
+                           FontSize="25" 
+                           HorizontalOptions="StartAndExpand" 
+                           VerticalOptions="Center"/>
+
+                    <ListView x:Name="TeamList"
+                              Grid.Row="1"
+                              Margin="0,5,0,0"
+                              VerticalOptions="FillAndExpand" 
+                              SeparatorVisibility="None" 
+                              HasUnevenRows="True" 
+                              ItemsSource="{Binding Teams, Mode=OneWay}"
+                              ItemSelected="OnTeamSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame CornerRadius="5"
+                                       Padding="5"
+                                       Margin="5"
+                                       HeightRequest="100" 
+                                       IsClippedToBounds="True">
+
+                                        <Grid HorizontalOptions="FillAndExpand"
+                                              VerticalOptions="FillAndExpand">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="30" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <BoxView Grid.Column="0" 
+                                                     Grid.RowSpan="2"
+                                                     Color="Red" 
+                                                     WidthRequest="80" 
+                                                     HeightRequest="100" 
+                                                     HorizontalOptions="Center"></BoxView>
+
+                                            <Label FontAttributes="Bold" 
+                                                   Grid.Row="0"
+                                                   Grid.Column="1" 
+                                                   FontSize="19" 
+                                                   Text="{Binding Name}"/>
+                                                                                        
+                                            <Label Text="{Binding Description}" 
+                                                   Grid.Row="1"
+                                                   Grid.Column="1" 
+                                                   HorizontalOptions="Start" 
+                                                   VerticalOptions="Start"
+                                                   FontSize="17"/>
+
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+
+                            
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </Grid>
+
+                <!--<Grid RowSpacing="1" ColumnSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="30" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Text="Today" Grid.Row="0" Grid.Column="0" FontSize="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="1" Grid.Column="1" FontSize="19">ARAM Team.</Label>
+                    <BoxView Grid.Row="1" Grid.Column="0" Color="Red" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="Looking for some quick aram games." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="2" Grid.Column="1" FontSize="19">Looking for a support role.</Label>
+                    <BoxView Grid.Row="2" Grid.Column="0" Color="Aqua" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Team in need for a support for normal games." Grid.Row="2" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="3" Grid.Column="1" FontSize="19">First time player.</Label>
+                    <BoxView Grid.Row="3" Grid.Column="0" Color="Green" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Just started recently need a skilled player to teach me." Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="4" Grid.Column="1" FontSize="19">ADC/Support.</Label>
+                    <BoxView Grid.Row="4" Grid.Column="0" Color="Purple" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Need a good combo of ADC and support for my game." Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="5" Grid.Column="1" FontSize="19">Only Play.</Label>
+                    <BoxView Grid.Row="5" Grid.Column="0" Color="Yellow" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               I am binge playing, gonna keep playing and never stopping." Grid.Row="5" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="6" Grid.Column="1" FontSize="19">Need a jungler.</Label>
+                    <BoxView Grid.Row="6" Grid.Column="0" Color="Orange" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Need a jungle to join my team." Grid.Row="6" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="7" Grid.Column="1" FontSize="19">Looking for a support.</Label>
+                    <BoxView Grid.Row="7" Grid.Column="0" Color="Brown" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               I main adc and need a support to support me." Grid.Row="7" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                    <Label FontAttributes="Bold" Grid.Row="8" Grid.Column="1" FontSize="19">Mid player</Label>
+                    <BoxView Grid.Row="8" Grid.Column="0" Color="Pink" WidthRequest="80" HeightRequest="100" HorizontalOptions="Center"></BoxView>
+                    <Label Text="                                                                         
+               Need a decent mid player to join my team." Grid.Row="8" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
+
+                </Grid>-->
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

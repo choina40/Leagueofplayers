@@ -18,13 +18,27 @@
        
         <StackLayout Spacing="20" Padding="16,40,16,40">
 
-                <Label Text="Title" FontSize="Medium" />
-                <Entry Text="{Binding Item.Text}" d:Text="Enter Title" FontSize="Small" />
-                <Label Text="Description" FontSize="Medium" />
-                <Editor Text="{Binding Item.Description}" d:Text="Enter Information" FontSize="Small" Margin="0" />
-                <Label Text="Change Type" FontSize="Medium" />
+                <Label Text="Title" 
+                       FontSize="Medium" />
+                <Entry Text="{Binding Item.Text}" 
+                       d:Text="Enter Title" 
+                       FontSize="Small"
+                       x:Name="Title"/>
+            
+                <Label Text="Description" 
+                       FontSize="Medium" />
+                <Editor Text="{Binding Item.Description}" 
+                        d:Text="Enter Information" 
+                        FontSize="Small" 
+                        Margin="0" 
+                        x:Name="Description"/>
+            
+                <Label Text="Change Type" 
+                       FontSize="Medium" />
+            
                 <Picker Title="Select a Mode"
-                    TitleColor="Red">
+                        TitleColor="Red"
+                        x:Name="Mode">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Normal 5 vs 5</x:String>
@@ -37,9 +51,11 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Label Text="Minimum Tier" FontSize="Medium" />
+                <Label Text="Minimum Tier" 
+                       FontSize="Medium" />
                 <Picker Title="All"
-                    TitleColor="Black">
+                        TitleColor="Black"
+                        x:Name="MinimumTier">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Iron</x:String>
@@ -54,9 +70,11 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Label Text="Maximum Tier" FontSize="Medium" />
+                <Label Text="Maximum Tier" 
+                       FontSize="Medium" />
                 <Picker Title="All"
-                    TitleColor="Black">
+                        TitleColor="Black"
+                        x:Name="MaximumTier">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Iron</x:String>
@@ -72,10 +90,11 @@
                     </Picker.ItemsSource>
                 </Picker>
                 <Button Text="Create Team!"
-        Font="Large"
-        BorderWidth="1"
-        HorizontalOptions="Center"
-        VerticalOptions="CenterAndExpand"/>
+                        Font="Large"
+                        BorderWidth="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="AddTeam"/>
 
         </StackLayout>
         </ScrollView>

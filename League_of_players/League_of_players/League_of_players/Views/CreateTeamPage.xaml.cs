@@ -38,5 +38,49 @@ namespace League_of_players.Views
         {
             await Navigation.PopModalAsync();
         }
+
+        private async void AddTeam(object sender, EventArgs e)
+        {
+            bool validate = true;
+            string Message = string.Empty;
+
+            if (Mode.SelectedIndex == -1)
+            {
+                validate = false;
+                Message = "Mode is required\n";
+            }
+            if (MinimumTier.SelectedIndex == -1)
+            {
+                validate = false;
+                Message = Message + "Minimum Tier is required\n";
+            }
+            if (MaximumTier.SelectedIndex == -1)
+            {
+                validate = false;
+                Message = Message + "Maximum Tier is required\n";
+            }
+
+            if (validate)
+            {
+                await App.mockDataStore.AddItemAsync(new Team
+                {
+                    Name = Title.Text,
+                    Description = Description.Text,
+                    Mode = Mode.SelectedItem.ToString(),
+                    Size = 1,
+                    MinTier = MinimumTier.SelectedItem.ToString(),
+                    MaxTier = MaximumTier.SelectedItem.ToString()
+                });
+
+                Title.Text = Description.Text = string.Empty;
+                Mode.SelectedIndex = MinimumTier.SelectedIndex = MaximumTier.SelectedIndex = -1;
+
+                await Navigation.PopAsync();            
+            }
+            else
+            {
+                await DisplayAlert("", Message, "OK");
+            }
+        }
     }
 }

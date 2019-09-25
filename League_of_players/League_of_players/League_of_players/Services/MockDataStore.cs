@@ -8,57 +8,55 @@ namespace League_of_players.Services
 {
     public class MockDataStore : IDataStore<Team>
     {
-        List<Team> items;
+        List<Team> teams;
 
         public MockDataStore()
         {
-            var items = new List<Team>
+            teams = new List<Team>();
+            var mockItems = new List<Team>
             {
-                new Team { Id = Guid.NewGuid().ToString(), Name = "ProTeam", Description="Not one to brag but yeah", Mode="Normal", Size = 3, Color="Blue"},
-                new Team { Id = Guid.NewGuid().ToString(), Name = "WeakTeam", Description="Please carry us", Mode="ARAM", Size = 1, Color="Blue"},
-                new Team { Id = Guid.NewGuid().ToString(), Name = "AveragePeeps", Description="Just button mash with us", Mode="Normal", Size = 3, Color="Blue"}
+                new Team { Name = "ProTeam", Description="This is an item description.", Mode="Normal", Size = 3},
+                new Team { Name = "WeakTeam", Description="This is an item description.", Mode="ARAM", Size = 1}
             };
 
-            
+            foreach (var team in mockItems)
+            {
+                teams.Add(team);
+            }
         }
 
-        public async Task<bool> AddItemAsync(Team item)
+        public async Task<bool> AddItemAsync(Team team)
         {
-            items.Add(item);
+            teams.Add(team);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Team item)
+        public async Task<bool> UpdateItemAsync(Team team)
         {
-            var oldItem = items.Where((Team arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(oldItem);
-            items.Add(item);
+            var oldItem = teams.Where((Team arg) => arg.Name == team.Name).FirstOrDefault();
+            teams.Remove(oldItem);
+            teams.Add(team);
 
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Team arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(oldItem);
+            var oldItem = teams.Where((Team arg) => arg.Name == id).FirstOrDefault();
+            teams.Remove(oldItem);
 
             return await Task.FromResult(true);
         }
 
         public async Task<Team> GetItemAsync(string id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+            return await Task.FromResult(teams.FirstOrDefault(s => s.Name == id));
         }
 
         public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(items);
-        }
-
-        public IEnumerable<Team> GetItems()
-        {
-            return items;
+            return await Task.FromResult(teams);
         }
     }
 }

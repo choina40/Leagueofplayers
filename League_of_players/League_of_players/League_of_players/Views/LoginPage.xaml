@@ -21,9 +21,9 @@
                HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"/>
             <StackLayout Spacing="20" Padding="16,40,16,40">
-                <Label Text="Username" FontSize="Large" />
-                <Entry x:Name="loginusernameEntry" />
-                <Label Text="Password" FontSize="Large"/>
+                <Label Text="Username" />
+                <Entry x:Name="loginusernameEntry" Placeholder="username" />
+                <Label Text="Password" />
                 <Entry x:Name="loginpasswordEntry" IsPassword="true" />
                 <Button Text="Login" Clicked="Handle_Clicked" />
                 <Label x:Name="loginmessageLabel" />

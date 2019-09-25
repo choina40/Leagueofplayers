@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="League_of_players.Views.TeamDetailPage">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="TeamName"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="20"
+                   Grid.Row="0"
+                   FontAttributes="Bold"/>
+
+            <StackLayout Grid.Row="1">
+                <Label Text="Description"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="17"
+                   Grid.Row="0"
+                   FontAttributes="Bold"/>
+
+                <Label x:Name="TeamDescription"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="15"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="2">
+                <Label Text="Mode"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="17"
+                   Grid.Row="0"
+                   FontAttributes="Bold"/>
+
+                <Label x:Name="Mode"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="15"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="3">
+                <Label Text="Minimum Tier"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="17"
+                   Grid.Row="0"
+                   FontAttributes="Bold"/>
+
+                <Label x:Name="MinTier"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="15"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="4">
+                <Label Text="Maximum Tier"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="17"
+                   Grid.Row="0"
+                   FontAttributes="Bold"/>
+
+                <Label x:Name="MaxTier"
+                   Grid.Row="4"
+                   VerticalTextAlignment="Start" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="15"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
