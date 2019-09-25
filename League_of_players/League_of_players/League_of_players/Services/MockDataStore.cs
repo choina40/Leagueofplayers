@@ -12,18 +12,14 @@ namespace League_of_players.Services
 
         public MockDataStore()
         {
-            items = new List<Team>();
-            var mockItems = new List<Team>
+            var items = new List<Team>
             {
-                new Team { Id = Guid.NewGuid().ToString(), Name = "ProTeam", Description="Not one to brag but yeah", Mode="Normal", Size = 3},
-                new Team { Id = Guid.NewGuid().ToString(), Name = "WeakTeam", Description="Please carry us", Mode="ARAM", Size = 1},
-                new Team { Id = Guid.NewGuid().ToString(), Name = "AveragePeeps", Description="Just button mash with us", Mode="Normal", Size = 3}
+                new Team { Id = Guid.NewGuid().ToString(), Name = "ProTeam", Description="Not one to brag but yeah", Mode="Normal", Size = 3, Color="Blue"},
+                new Team { Id = Guid.NewGuid().ToString(), Name = "WeakTeam", Description="Please carry us", Mode="ARAM", Size = 1, Color="Blue"},
+                new Team { Id = Guid.NewGuid().ToString(), Name = "AveragePeeps", Description="Just button mash with us", Mode="Normal", Size = 3, Color="Blue"}
             };
 
-            foreach (var item in mockItems)
-            {
-                items.Add(item);
-            }
+            
         }
 
         public async Task<bool> AddItemAsync(Team item)
@@ -58,6 +54,11 @@ namespace League_of_players.Services
         public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
+        }
+
+        public IEnumerable<Team> GetItems()
+        {
+            return items;
         }
     }
 }

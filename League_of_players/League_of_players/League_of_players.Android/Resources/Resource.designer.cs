@@ -6457,10 +6457,7 @@ namespace League_of_players.Droid
 			public const int xamarin_logo = 2131165502;
 			
 			// aapt resource value: 0x7F07013F
-			public const int yasuo = 2131165503;
-			
-			// aapt resource value: 0x7F070140
-			public const int zed2 = 2131165504;
+			public const int zed2 = 2131165503;
 			
 			static Drawable()
 			{

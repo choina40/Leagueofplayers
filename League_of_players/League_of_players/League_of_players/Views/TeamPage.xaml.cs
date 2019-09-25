@@ -15,6 +15,7 @@ namespace League_of_players.Views
         public TeamPage()
         {
             InitializeComponent();
+            //App.DataStore();
         }
 
     }

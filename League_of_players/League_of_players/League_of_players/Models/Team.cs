@@ -9,5 +9,6 @@ namespace League_of_players.Models
         public string Description { get; set; }
         public string Mode { get; set; }
         public int Size { get; set; }
+        public string Color { get; set; } 
     }
 }

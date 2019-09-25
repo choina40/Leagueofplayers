@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using League_of_players.Services;
 using League_of_players.Views;
+using League_of_players.Models;
 
 namespace League_of_players
 {
@@ -15,11 +16,13 @@ namespace League_of_players
         public static string AzureBackendUrl =
             DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
         public static bool UseMockDataStore = true;
+        public static IDataStore<Team> DataStore => DependencyService.Get<IDataStore<Team>>() ?? new MockDataStore();
 
         public App()
         {
             InitializeComponent();
-
+            // Cloud Data Store
+            //DependencyService.Register<CloudTeamService>();
             if (UseMockDataStore)
                 DependencyService.Register<MockDataStore>();
             else
