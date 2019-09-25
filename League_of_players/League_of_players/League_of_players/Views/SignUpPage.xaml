@@ -11,16 +11,26 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="16,40,16,40">
-            <Label Text="Username" />
-            <Entry x:Name="usernameEntry" Placeholder="username" />
-            <Label Text="Password" />
+        <RelativeLayout>
+
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}">
+
+                <Image Source="ez.jpeg" Aspect="AspectFill"
+               HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
+                <StackLayout Spacing="20" Padding="16,40,16,40">
+            <Label Text="Username" FontSize="Large"/>
+            <Entry x:Name="usernameEntry"  />
+            <Label Text="Password" FontSize="Large"/>
             <Entry x:Name="passwordEntry" IsPassword="true" />
-            <Label Text="Re-Password" />
+            <Label Text="Re-Password" FontSize="Large" />
             <Entry x:Name="passwordEntry1" />
             <Button Text="Sign Up" Clicked="Handle_Clicked" />
             <Label x:Name="messageLabel" />
         </StackLayout>
+            </Grid>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
 
