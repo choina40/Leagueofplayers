@@ -94,7 +94,9 @@
                         BorderWidth="1"
                         HorizontalOptions="Center"
                         VerticalOptions="CenterAndExpand"
-                        Clicked="AddTeam"/>
+                        Clicked="AddTeam"
+                        BackgroundColor="#2196F3"
+                        TextColor="White"/>
 
         </StackLayout>
         </ScrollView>

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace League_of_players.ViewModels
 {
-    public class ProfileViewModel : BaseViewModel
+    public class Profile2ViewModel : BaseViewModel
     {
 
-        public ProfileViewModel()
+        public Profile2ViewModel()
         {
             Title = "Profile";
 
@@ -18,7 +18,7 @@ namespace League_of_players.ViewModels
 
         }
 
-        string name = "Galaxy BADWAa";
+        string name = "Nagune";
 
        
 
@@ -31,7 +31,7 @@ namespace League_of_players.ViewModels
                 OnPropertyChanged(nameof(Name));
             }
         }
-        string bio = "Bio: I am a good player who steals kills";
+        string bio = "Bio: I am a noisy man who talk more instead of playing hard";
         public string Bio
         {
             get => bio; //same as get { return name; }

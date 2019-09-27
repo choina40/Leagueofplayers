@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="League_of_players.Views.ProfilePage"
+             x:Class="League_of_players.Views.ProfilePage2"
              xmlns:vm="clr-namespace:League_of_players.ViewModels"
              Title="{Binding Title}">
                 
@@ -26,22 +26,23 @@
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
 
                 
-                <Image Source="summonericon3.png"></Image>
+                <Image Source="summonericon.PNG" />
 
-                <Label Text="{Binding Name}"
+                <Label Text="Nagune"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center" />
 
-                <Label Text="Level:30   Silver VI"
+                <Label Text="Level:160   Platinum III"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center" />
 
-                <Label Text="52 LP  |   83W / 96L"
+                <Label Text="21 LP  |   162W / 154L"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center" />
 
-                <Label Text="{Binding Bio}"
+
+                <Label Text="I'm a noisy player who want to have great time playing with others"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center" />
 
@@ -57,22 +58,23 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <BoxView Grid.Row="0" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
+                        <Image Source="Irelia.png" Grid.Row="0" Grid.Column="-3" HorizontalOptions="Start"></Image>
                         <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
-                            <Label Text="Yasuo"></Label>
-                            <Label Text="68% 2W/1L"></Label>
+                            <Label Text="Irelia" FontAttributes="Bold" FontSize="Medium"></Label>
+                            <Label Text="60% 47played"></Label>
                         </StackLayout>
 
-                        <BoxView Grid.Row="1" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
+
+                        <Image Source="Aatrox.png" Grid.Row="1" Grid.Column="-3" HorizontalOptions="Start"></Image>
                         <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Start">
-                            <Label Text="Yasuo"></Label>
-                            <Label Text="68% 2W/1L"></Label>
+                            <Label Text="Aatrox" FontAttributes="Bold" FontSize="Medium"></Label>
+                            <Label Text="60% 45played"></Label>
                         </StackLayout>
 
-                        <BoxView Grid.Row="2" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
+                        <Image Source="Neeko.png" Grid.Row="2" Grid.Column="-3" HorizontalOptions="Start"></Image>
                         <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
-                            <Label Text="Yasuo"></Label>
-                            <Label Text="68% 2W/1L"></Label>
+                            <Label Text="Neeko" FontAttributes="Bold" FontSize="Medium"></Label>
+                            <Label Text="55% 29played"></Label>
                         </StackLayout>
 
                     </Grid>
