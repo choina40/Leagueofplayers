@@ -5,83 +5,123 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="League_of_players.Views.TeamDetailPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid Padding="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+        
+        <StackLayout Padding="16,40,16,40" Spacing="10" BackgroundColor="WhiteSmoke">
+            <Grid>
+                <BoxView Color="White"
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                <Label Margin="10, 20, 10, 10" Text="Top"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+                <Label Margin="10, 50, 10, 10" Text="Empty"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Start" />
+                
+                <Button Margin="0,0,0,0" Text="Kick Player"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Clicked="CreateTeam_Clicked"/>
+            </Grid>
 
-            <Label x:Name="TeamName"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="20"
-                   Grid.Row="0"
-                   FontAttributes="Bold"/>
+            <Grid>
+                <BoxView Color="White"
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                <Label Margin="10, 20, 10, 10" Text="Jungle"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+                <Label Margin="10, 50, 10, 10" Text="Empty"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Start" />
 
-            <StackLayout Grid.Row="1">
-                <Label Text="Description"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="17"
-                   Grid.Row="0"
-                   FontAttributes="Bold"/>
+                <Button Margin="0,0,0,0" Text="Kick Player"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Clicked="CreateTeam_Clicked"/>
+            </Grid>
+            <Grid>
+                <BoxView Color="White"
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                <Label Margin="10, 20, 10, 10" Text="Nagune"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+                <Label Margin="10, 50, 10, 10" Text="I'm a noisy player who want to have great time playing with others"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Start" />
 
-                <Label x:Name="TeamDescription"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="15"/>
+                <Button Margin="0,0,0,0" Text="Kick Player"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Clicked="CreateTeam_Clicked"/>
+            </Grid>
+            <Grid>
+                <BoxView Color="White"
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                <Label Margin="10, 20, 10, 10" Text="ADC"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+                <Label Margin="10, 50, 10, 10" Text="Empty"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Start" />
 
-            </StackLayout>
+                <Button Margin="0,0,0,0" Text="Kick Player"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Clicked="CreateTeam_Clicked"/>
+            </Grid>
+            <Grid>
+                <BoxView Color="White"
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                <Label Margin="10, 20, 10, 10" Text="Galaxy BADWAa"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+                <Label Margin="10, 50, 10, 10" Text="I am a good player who steals kills"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Start" />
 
-            <StackLayout Grid.Row="2">
-                <Label Text="Mode"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="17"
-                   Grid.Row="0"
-                   FontAttributes="Bold"/>
-
-                <Label x:Name="Mode"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="15"/>
-
-            </StackLayout>
-
-            <StackLayout Grid.Row="3">
-                <Label Text="Minimum Tier"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="17"
-                   Grid.Row="0"
-                   FontAttributes="Bold"/>
-
-                <Label x:Name="MinTier"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="15"/>
-
-            </StackLayout>
-
-            <StackLayout Grid.Row="4">
-                <Label Text="Maximum Tier"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="17"
-                   Grid.Row="0"
-                   FontAttributes="Bold"/>
-
-                <Label x:Name="MaxTier"
-                   Grid.Row="4"
-                   VerticalTextAlignment="Start" 
-                   HorizontalTextAlignment="Start" 
-                   FontSize="15"/>
-            </StackLayout>
-
-        </Grid>
+                <Button Margin="0,0,0,0" Text="Kick Player"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Clicked="CreateTeam_Clicked"/>
+            </Grid>
+            <Button Text="Leave Team" BackgroundColor="{StaticResource Primary}" FontSize="Large" TextColor="White" FontAttributes="Bold"></Button>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
