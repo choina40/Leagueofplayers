@@ -83,7 +83,7 @@
                 <Button Margin="0,10,0,0" Text="Make profile public"
                         Command="{Binding NavButtonCommand}"
                         BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
+                        TextColor="White" FontAttributes="Bold" FontSize="Large"/>
                     
             </StackLayout>
         </ScrollView>
