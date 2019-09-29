@@ -38,8 +38,6 @@
                     <Button Margin="10,10,0,10" Text="View"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
-                        FontSize="Large"
-                        FontAttributes="Bold"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
                         Clicked="FindPlayer_Clicked"/>
@@ -60,16 +58,12 @@
                     <Button Margin="10,10,0,10" Text="View"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
-                        FontAttributes="Bold"
-                            FontSize="Large"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
                         Clicked="FindTeam_Clicked"/>
                     <Button Margin="110,10,0,10" Text="Create"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
-                        FontAttributes="Bold"
-                            FontSize="Large"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
                         Clicked="CreateTeam_Clicked"/>
