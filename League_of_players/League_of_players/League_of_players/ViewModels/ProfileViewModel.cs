@@ -18,7 +18,7 @@ namespace League_of_players.ViewModels
 
         }
 
-        string name = "Galaxy BADWAa";
+        string name = "DragonSlayer32";
 
        
 

@@ -117,15 +117,5 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ez.jpeg" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\summonericon.PNG">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\summonericon3.png">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-    </AndroidResource>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -25,8 +25,10 @@
         <ScrollView>
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
 
-                
-                <Image Source="summonericon3.png"></Image>
+                <BoxView Color="{StaticResource Accent}"
+                     WidthRequest="200"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"></BoxView>
 
                 <Label Text="{Binding Name}"
                    FontSize="Large"

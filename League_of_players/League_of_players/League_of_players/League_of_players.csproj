@@ -28,9 +28,6 @@
     <Compile Update="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ProfilePage2.xaml.cs">
-      <DependentUpon>ProfilePage2.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>

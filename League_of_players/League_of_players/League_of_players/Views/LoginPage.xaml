@@ -21,12 +21,11 @@
                HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"/>
             <StackLayout Spacing="20" Padding="16,40,16,40">
-                <Label Text="Username" FontSize="Large"/>
-                <Entry x:Name="loginusernameEntry" Placeholder="Enter Username" />
-                <Label Text="Password" FontSize="Large"/>
-                <Entry x:Name="loginpasswordEntry" IsPassword="true" Placeholder="Enter Password"/>
-                <Button Text="Login" Clicked="Handle_Clicked" BackgroundColor="#2196F3"
-                        TextColor="White"/>
+                <Label Text="Username" />
+                <Entry x:Name="loginusernameEntry" Placeholder="username" />
+                <Label Text="Password" />
+                <Entry x:Name="loginpasswordEntry" IsPassword="true" />
+                <Button Text="Login" Clicked="Handle_Clicked" />
                 <Label x:Name="loginmessageLabel" />
             </StackLayout>
         </Grid>
