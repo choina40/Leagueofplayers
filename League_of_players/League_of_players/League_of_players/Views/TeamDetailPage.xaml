@@ -28,24 +28,12 @@
                        HorizontalTextAlignment="Start" />
                 
                 <Button Margin="0,0,0,0" Text="Kick Player"
-                        WidthRequest="120"
-                        HeightRequest="40"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         FontAttributes="Bold"
                         FontSize="Medium"
                         HorizontalOptions="End"
                         VerticalOptions="Start"
-                        Clicked="CreateTeam_Clicked"/>
-                <Button Margin="0,0,0,0" Text="View profile"
-                        WidthRequest="120"
-                        HeightRequest="40"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        HorizontalOptions="End"
-                        VerticalOptions="End"
                         Clicked="CreateTeam_Clicked"/>
             </Grid>
 
@@ -62,24 +50,12 @@
                        HorizontalTextAlignment="Start" />
 
                 <Button Margin="0,0,0,0" Text="Kick Player"
-                        WidthRequest="120"
-                        HeightRequest="40"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         FontAttributes="Bold"
                         FontSize="Medium"
                         HorizontalOptions="End"
                         VerticalOptions="Start"
-                        Clicked="CreateTeam_Clicked"/>
-                <Button Margin="0,0,0,0" Text="View profile"
-                        WidthRequest="120"
-                        HeightRequest="40"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        HorizontalOptions="End"
-                        VerticalOptions="End"
                         Clicked="CreateTeam_Clicked"/>
             </Grid>
             <Grid>
@@ -90,29 +66,17 @@
                        FontSize="Large"
                        HorizontalTextAlignment="Start" 
                        FontAttributes="Bold"/>
-                <Label Margin="10, 50, 100, 0" Text="I'm a noisy player who want to have great time playing with others"
+                <Label Margin="10, 50, 10, 10" Text="I'm a noisy player who want to have great time playing with others"
                        FontSize="Medium"
                        HorizontalTextAlignment="Start" />
 
                 <Button Margin="0,0,0,0" Text="Kick Player"
-                        WidthRequest="120"
-                        HeightRequest="40"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         FontAttributes="Bold"
                         FontSize="Medium"
                         HorizontalOptions="End"
                         VerticalOptions="Start"
-                        Clicked="CreateTeam_Clicked"/>
-                <Button Margin="0,0,0,0" Text="View profile"
-                        WidthRequest="120"
-                        HeightRequest="40"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        HorizontalOptions="End"
-                        VerticalOptions="End"
                         Clicked="CreateTeam_Clicked"/>
             </Grid>
             <Grid>
@@ -128,49 +92,27 @@
                        HorizontalTextAlignment="Start" />
 
                 <Button Margin="0,0,0,0" Text="Kick Player"
-                        WidthRequest="120"
-                        HeightRequest="40"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         FontAttributes="Bold"
                         FontSize="Medium"
                         HorizontalOptions="End"
                         VerticalOptions="Start"
-                        Clicked="CreateTeam_Clicked"/>
-                <Button Margin="0,0,0,0" Text="View profile"
-                        WidthRequest="120"
-                        HeightRequest="40"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        HorizontalOptions="End"
-                        VerticalOptions="End"
                         Clicked="CreateTeam_Clicked"/>
             </Grid>
             <Grid>
                 <BoxView Color="White"
                      WidthRequest="150"
                      HeightRequest="150"></BoxView>
-                <Label Margin="10, 20, 10, 10" Text="♚ Galaxy BADWAa"
+                <Label Margin="10, 20, 10, 10" Text="Galaxy BADWAa"
                        FontSize="Large"
                        HorizontalTextAlignment="Start" 
                        FontAttributes="Bold"/>
-                <Label Margin="10, 50, 100, 0" Text="I am a good player who steals kills"
+                <Label Margin="10, 50, 10, 10" Text="I am a good player who steals kills"
                        FontSize="Medium"
                        HorizontalTextAlignment="Start" />
 
-                <!--"<Button Margin="0,0,0,0" Text="Kick Player"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        HorizontalOptions="End"
-                        VerticalOptions="Start"
-                        Clicked="CreateTeam_Clicked"/>-->
-                <Button Margin="0,0,0,0" Text="View profile"
-                        WidthRequest="120"
-                        HeightRequest="40"
+                <Button Margin="0,0,0,0" Text="Kick Player"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         FontAttributes="Bold"
