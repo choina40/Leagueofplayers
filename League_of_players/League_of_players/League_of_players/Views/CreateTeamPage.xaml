@@ -1,32 +1,47 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="League_of_players.Views.CreateTeamPage"
-             Title="{Binding Title}">
-    
+             Title="{Binding Title}"
+                 >
+             
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <ScrollView>
+        <RelativeLayout 
+            >
+
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
+
+                <Image Source="team.jpg"  Aspect="AspectFill" 
+               HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
+                <ScrollView>
             
        
         <StackLayout Spacing="20" Padding="16,40,16,40">
 
                 <Label Text="Title" 
-                       FontSize="Medium" />
+                       FontSize="Large" 
+                       FontAttributes="Bold"/>
                 <Entry Text="{Binding Item.Text}" 
                        d:Text="Enter Title" 
-                       FontSize="Small"
+                       FontSize="Large"
+                       
                        x:Name="Title"/>
             
                 <Label Text="Description" 
-                       FontSize="Medium" />
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
                 <Editor Text="{Binding Item.Description}" 
                         d:Text="Enter Information" 
                         FontSize="Small" 
@@ -34,7 +49,8 @@
                         x:Name="Description"/>
             
                 <Label Text="Change Type" 
-                       FontSize="Medium" />
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
             
                 <Picker Title="Select a Mode"
                         TitleColor="Red"
@@ -52,7 +68,8 @@
                     </Picker.ItemsSource>
                 </Picker>
                 <Label Text="Minimum Tier" 
-                       FontSize="Medium" />
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
                 <Picker Title="All"
                         TitleColor="Black"
                         x:Name="MinimumTier">
@@ -71,7 +88,8 @@
                     </Picker.ItemsSource>
                 </Picker>
                 <Label Text="Maximum Tier" 
-                       FontSize="Medium" />
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
                 <Picker Title="All"
                         TitleColor="Black"
                         x:Name="MaximumTier">
@@ -98,6 +116,8 @@
 
         </StackLayout>
         </ScrollView>
+            </Grid>
+        </RelativeLayout>
     </ContentPage.Content>
     
 </ContentPage>

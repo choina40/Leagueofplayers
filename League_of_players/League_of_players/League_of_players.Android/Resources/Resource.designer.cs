@@ -6448,16 +6448,19 @@ namespace League_of_players.Droid
 			public const int tab_feed = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
-			public const int tooltip_frame_dark = 2131165500;
+			public const int team = 2131165500;
 			
 			// aapt resource value: 0x7F07013D
-			public const int tooltip_frame_light = 2131165501;
+			public const int tooltip_frame_dark = 2131165501;
 			
 			// aapt resource value: 0x7F07013E
-			public const int xamarin_logo = 2131165502;
+			public const int tooltip_frame_light = 2131165502;
 			
 			// aapt resource value: 0x7F07013F
-			public const int zed2 = 2131165503;
+			public const int xamarin_logo = 2131165503;
+			
+			// aapt resource value: 0x7F070140
+			public const int zed2 = 2131165504;
 			
 			static Drawable()
 			{
