@@ -16,19 +16,19 @@
             <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}">
 
-                <Image Source="ez.jpeg" Aspect="AspectFill"
+                <Image Source="all.jpg" Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"/>
 
                 <StackLayout Spacing="20" Padding="16,40,16,40">
-                    <Label Text="Username" />
-                    <Entry x:Name="usernameEntry" Placeholder="username" />
-                    <Label Text="Password" />
+                    <Label Text="Username" TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
+                    <Entry x:Name="usernameEntry" />
+                    <Label Text="Password" TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
                     <Entry x:Name="passwordEntry" IsPassword="true" />
-                    <Label Text="Re-Password" />
+                    <Label Text="Re-Password" TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
                     <Entry x:Name="passwordEntry1" />
-                    <Button Text="Sign Up" Clicked="Handle_Clicked" />
-                    <Label x:Name="messageLabel" />
+                    <Button Text="Sign Up" TextColor="Black" Clicked="Handle_Clicked" />
+                    <Label x:Name="messageLabel" TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
                 </StackLayout>
             </Grid>
         </RelativeLayout>

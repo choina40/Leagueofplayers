@@ -9,6 +9,13 @@
              Title="{Binding Title}">
 
     <ContentPage.Content>
+        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
+
+            <Image Source="akali.png"  Aspect="AspectFill" 
+               HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
+
         <StackLayout>
             <Grid RowSpacing="1" ColumnSpacing="1">
                 <Grid.RowDefinitions>
@@ -75,5 +82,7 @@
             
             
         </StackLayout>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

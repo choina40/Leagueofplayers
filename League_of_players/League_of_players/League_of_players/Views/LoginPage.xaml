@@ -13,20 +13,21 @@
     </ContentPage.ToolbarItems>
 
     <RelativeLayout>
-        
-        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
-               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}">
 
-            <Image Source="zed2.png" Aspect="AspectFill"
+        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
+
+            <Image Source="dark.jpg"  Aspect="AspectFill" 
                HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"/>
+            
             <StackLayout Spacing="20" Padding="16,40,16,40">
-                <Label Text="Username" />
-                <Entry x:Name="loginusernameEntry" Placeholder="username" />
-                <Label Text="Password" />
+                <Label Text="Username" TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
+                <Entry x:Name="loginusernameEntry"  />
+                <Label Text="Password"  TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
                 <Entry x:Name="loginpasswordEntry" IsPassword="true" />
-                <Button Text="Login" Clicked="Handle_Clicked" />
-                <Label x:Name="loginmessageLabel" />
+                <Button Text="Login" TextColor="Black" Clicked="Handle_Clicked" />
+                <Label x:Name="loginmessageLabel"  TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
             </StackLayout>
         </Grid>
     </RelativeLayout>

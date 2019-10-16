@@ -21,56 +21,59 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Padding="16,40,16,40" Spacing="20" BackgroundColor="WhiteSmoke">
-                <Grid>
-                    <BoxView Color="White"
+
+            <ScrollView>
+
+                <StackLayout Padding="16,40,16,40" Spacing="20" BackgroundColor="WhiteSmoke">
+                    <Grid>
+                        <BoxView Color="White"
                      WidthRequest="150"
                      HeightRequest="150"></BoxView>
-                    <Label Margin="10, 20, 10, 10" Text="Players"
+                        <Label Margin="10, 20, 10, 10" Text="Players"
                        FontSize="Large"
                        HorizontalTextAlignment="Start" 
                        FontAttributes="Bold"/>
-                    <Label Margin="10, 50, 10, 10"
+                        <Label Margin="10, 50, 10, 10"
                        Text="Find individual players"
                        FontSize="Medium"
                        HorizontalTextAlignment="Start" />
-                    <Button Margin="10,10,0,10" Text="View"
+                        <Button Margin="10,10,0,10" Text="View"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
                         Clicked="FindPlayer_Clicked"/>
 
-                </Grid>
+                    </Grid>
 
-                <Grid>
-                    <BoxView Color="White"
+                    <Grid>
+                        <BoxView Color="White"
                      WidthRequest="150"
                      HeightRequest="150"></BoxView>
-                    <Label Margin="10, 20, 10, 10" Text="Teams"
+                        <Label Margin="10, 20, 10, 10" Text="Teams"
                        FontSize="Large"
                        HorizontalTextAlignment="Start" 
                        FontAttributes="Bold"/>
-                    <Label Margin="10, 50, 10, 10" Text="Get paired with a team"
+                        <Label Margin="10, 50, 10, 10" Text="Get paired with a team"
                        FontSize="Medium"
                        HorizontalTextAlignment="Start" />
-                    <Button Margin="10,10,0,10" Text="View"
+                        <Button Margin="10,10,0,10" Text="View"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
                         Clicked="FindTeam_Clicked"/>
-                    <Button Margin="110,10,0,10" Text="Create"
+                        <Button Margin="110,10,0,10" Text="Create"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
                         Clicked="CreateTeam_Clicked"/>
-                </Grid>
-            </StackLayout>
-        </ScrollView>
-        
+                    </Grid>
+                </StackLayout>
+
+            </ScrollView>
+
     </ContentPage.Content>
 
 

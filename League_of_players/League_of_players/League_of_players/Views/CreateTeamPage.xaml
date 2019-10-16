@@ -16,8 +16,7 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <RelativeLayout 
-            >
+        <RelativeLayout >
 
             <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
@@ -31,8 +30,9 @@
         <StackLayout Spacing="20" Padding="16,40,16,40">
 
                 <Label Text="Title" 
-                       FontSize="Large" 
-                       FontAttributes="Bold"/>
+                       FontSize="Title" 
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
                 <Entry Text="{Binding Item.Text}" 
                        d:Text="Enter Title" 
                        FontSize="Large"
@@ -40,8 +40,9 @@
                        x:Name="Title"/>
             
                 <Label Text="Description" 
-                       FontSize="Large"
-                       FontAttributes="Bold"/>
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
                 <Editor Text="{Binding Item.Description}" 
                         d:Text="Enter Information" 
                         FontSize="Small" 
@@ -49,8 +50,9 @@
                         x:Name="Description"/>
             
                 <Label Text="Change Type" 
-                       FontSize="Large"
-                       FontAttributes="Bold"/>
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
             
                 <Picker Title="Select a Mode"
                         TitleColor="Red"
@@ -68,8 +70,9 @@
                     </Picker.ItemsSource>
                 </Picker>
                 <Label Text="Minimum Tier" 
-                       FontSize="Large"
-                       FontAttributes="Bold"/>
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
                 <Picker Title="All"
                         TitleColor="Black"
                         x:Name="MinimumTier">
@@ -88,8 +91,9 @@
                     </Picker.ItemsSource>
                 </Picker>
                 <Label Text="Maximum Tier" 
-                       FontSize="Large"
-                       FontAttributes="Bold"/>
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
                 <Picker Title="All"
                         TitleColor="Black"
                         x:Name="MaximumTier">
