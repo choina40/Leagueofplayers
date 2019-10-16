@@ -17,7 +17,7 @@
         <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
 
-            <Image Source="dark.jpg"  Aspect="AspectFill" 
+            <Image Source="s9.jpg"  Aspect="AspectFill" 
                HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"/>
             

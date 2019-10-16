@@ -21,12 +21,20 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
+        <RelativeLayout >
 
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
+
+                <Image Source="ez2.jpg"  Aspect="AspectFill" 
+               HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
             <ScrollView>
 
-                <StackLayout Padding="16,40,16,40" Spacing="20" BackgroundColor="WhiteSmoke">
-                    <Grid>
-                        <BoxView Color="White"
+                <StackLayout Padding="16,40,16,40" Spacing="20">
+                    
+                    <Grid  >
+                    <BoxView BackgroundColor="White"
                      WidthRequest="150"
                      HeightRequest="150"></BoxView>
                         <Label Margin="10, 20, 10, 10" Text="Players"
@@ -73,7 +81,8 @@
                 </StackLayout>
 
             </ScrollView>
-
+            </Grid>
+        </RelativeLayout>
     </ContentPage.Content>
 
 

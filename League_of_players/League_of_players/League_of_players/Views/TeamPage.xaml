@@ -20,46 +20,54 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
 
-                <BoxView Color="{StaticResource Accent}"
+            <Image Source="tf.jpg"  Aspect="AspectFill" 
+               HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
+            <ScrollView>
+                <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+
+                    <BoxView Color="{StaticResource Accent}"
                      WidthRequest="200"
                      HeightRequest="100"
                      HorizontalOptions="Center"></BoxView>
 
-                <Label HorizontalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span FontSize="Large" FontAttributes="Bold" Text="{Binding Name}"></Span>
-                            <Span Text=" "></Span>
-                            <Span FontSize="Medium" Text="{Binding Size, StringFormat='{0}'}"></Span>
-                            <Span FontSize="Medium" Text="/4"></Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                    <Label HorizontalTextAlignment="Center" TextColor="Black">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontSize="Large" FontAttributes="Bold" Text="{Binding Name}"></Span>
+                                <Span Text=" "></Span>
+                                <Span FontSize="Medium" Text="{Binding Size, StringFormat='{0}'}"></Span>
+                                <Span FontSize="Medium" Text="/4"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
 
-                <Label HorizontalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span FontSize="Medium" Text="Mode:"></Span>
-                            <Span Text=" "></Span>
-                            <Span FontSize="Medium" Text="{Binding Mode}"></Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                    <Label HorizontalTextAlignment="Center" TextColor="Black">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontSize="Medium" Text="Mode:"></Span>
+                                <Span Text=" "></Span>
+                                <Span FontSize="Medium" Text="{Binding Mode}"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
 
-                <Label Text="{Binding Description}"
+                    <Label Text="{Binding Description} "
                    FontSize="Medium"
-                   HorizontalTextAlignment="Center" />
+                   HorizontalTextAlignment="Center" 
+                           TextColor="Black"/>
 
-                <Button Margin="0,10,0,0" Text="Join Team"
+                    <Button Margin="0,10,0,0" Text="Join Team"
                         Command="{Binding NavButtonCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
-                    
-            </StackLayout>
-        </ScrollView>
+
+                </StackLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
 
 </ContentPage>

@@ -19,25 +19,31 @@
     
     
     <ContentPage.Content>
+        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" >
 
-        <ScrollView>
-            <StackLayout Spacing="20" Padding="16,40,16,40">
+            <Image Source="lee.png"  Aspect="AspectFill" 
+               HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
 
-                <Grid RowSpacing="1" 
+            <ScrollView>
+                <StackLayout Spacing="20" Padding="16,40,16,40">
+
+                    <Grid RowSpacing="1" 
                       ColumnSpacing="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
 
 
-                    <Label Text="Today" 
+                        <Label Text="Today" 
                            Grid.Row="0" 
                            FontSize="25" 
                            HorizontalOptions="StartAndExpand" 
                            VerticalOptions="Center"/>
 
-                    <ListView x:Name="TeamList"
+                        <ListView x:Name="TeamList"
                               Grid.Row="1"
                               Margin="0,5,0,0"
                               VerticalOptions="FillAndExpand" 
@@ -45,59 +51,59 @@
                               HasUnevenRows="True" 
                               ItemsSource="{Binding Teams, Mode=OneWay}"
                               ItemSelected="OnTeamSelected">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <Frame CornerRadius="5"
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame CornerRadius="5"
                                        Padding="5"
                                        Margin="5"
                                        HeightRequest="100" 
                                        IsClippedToBounds="True">
 
-                                        <Grid HorizontalOptions="FillAndExpand"
+                                            <Grid HorizontalOptions="FillAndExpand"
                                               VerticalOptions="FillAndExpand">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition />
-                                                <RowDefinition />
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="100" />
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="30" />
-                                            </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="100" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="30" />
+                                                </Grid.ColumnDefinitions>
 
-                                            <BoxView Grid.Column="0" 
+                                                <BoxView Grid.Column="0" 
                                                      Grid.RowSpan="2"
                                                      Color="Red" 
                                                      WidthRequest="80" 
                                                      HeightRequest="100" 
                                                      HorizontalOptions="Center"></BoxView>
 
-                                            <Label FontAttributes="Bold" 
+                                                <Label FontAttributes="Bold" 
                                                    Grid.Row="0"
                                                    Grid.Column="1" 
                                                    FontSize="19" 
                                                    Text="{Binding Name}"/>
-                                                                                        
-                                            <Label Text="{Binding Description}" 
+
+                                                <Label Text="{Binding Description}" 
                                                    Grid.Row="1"
                                                    Grid.Column="1" 
                                                    HorizontalOptions="Start" 
                                                    VerticalOptions="Start"
                                                    FontSize="17"/>
 
-                                        </Grid>
-                                    </Frame>
-                                </ViewCell>
-                            </DataTemplate>
+                                            </Grid>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
 
-                            
-                        </ListView.ItemTemplate>
-                    </ListView>
 
-                </Grid>
+                            </ListView.ItemTemplate>
+                        </ListView>
 
-                <!--<Grid RowSpacing="1" ColumnSpacing="1">
+                    </Grid>
+
+                    <!--<Grid RowSpacing="1" ColumnSpacing="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
@@ -158,8 +164,9 @@
                Need a decent mid player to join my team." Grid.Row="8" Grid.Column="1" HorizontalOptions="Start" FontSize="17"/>
 
                 </Grid>-->
-            </StackLayout>
-        </ScrollView>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
 
     
