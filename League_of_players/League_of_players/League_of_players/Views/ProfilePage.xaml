@@ -71,23 +71,20 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <BoxView Grid.Row="0" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
-                                <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
-                                    <Label Text="Yasuo"></Label>
-                                    <Label Text="68% 2W/1L"></Label>
-                                </StackLayout>
 
-                                <BoxView Grid.Row="1" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
-                                <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Start">
-                                    <Label Text="Yasuo"></Label>
-                                    <Label Text="68% 2W/1L"></Label>
-                                </StackLayout>
-
-                                <BoxView Grid.Row="2" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
-                                <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
-                                    <Label Text="Yasuo"></Label>
-                                    <Label Text="68% 2W/1L"></Label>
-                                </StackLayout>
+                                <ListView ItemsSource="{Binding Champion}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackLayout Padding="50, 0, 50, 5" Orientation="Horizontal">
+                                                <BoxView Color="{StaticResource Accent}"/>
+                                                <StackLayout>
+                                                    <Label Text="{Binding Name}"/>
+                                                    <Label Text="{Binding Ratio}"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
 
                             </Grid>
                         </StackLayout>
