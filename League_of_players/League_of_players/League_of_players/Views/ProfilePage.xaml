@@ -73,6 +73,7 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
+<<<<<<< HEAD
                                 <BoxView Grid.Row="0" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
                                 <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
                                     <Label Text="Yasuo" TextColor="Black"></Label>
@@ -90,6 +91,22 @@
                                     <Label Text="Yasuo" TextColor="Black"></Label>
                                     <Label Text="68% 2W/1L" TextColor="Black"></Label>
                                 </StackLayout>
+=======
+
+                                <ListView ItemsSource="{Binding Champion}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackLayout Padding="50, 0, 50, 5" Orientation="Horizontal">
+                                                <BoxView Color="{StaticResource Accent}"/>
+                                                <StackLayout>
+                                                    <Label Text="{Binding Name}"/>
+                                                    <Label Text="{Binding Ratio}"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+>>>>>>> bbaacf31bee5850774755e54900cc96ad59b729e
 
                             </Grid>
                         </StackLayout>

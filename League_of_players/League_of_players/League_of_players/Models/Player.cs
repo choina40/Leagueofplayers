@@ -2,10 +2,9 @@
 
 namespace League_of_players.Models
 {
-    public class Player
+    public class Champion
     {
         public string Name { get; set; }
-        public string Bio { get; set; }
-        public string Description { get; set; }
+        public string Ratio { get; set; }
     }
 }
