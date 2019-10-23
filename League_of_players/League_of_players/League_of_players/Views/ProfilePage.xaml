@@ -49,14 +49,16 @@
 
                         <Label Text="Level:30   Silver VI"
                    FontSize="Medium"
-                   HorizontalTextAlignment="Center" />
+                   HorizontalTextAlignment="Center" TextColor="Black"/>
 
                         <Label Text="52 LP  |   83W / 96L"
+                    TextColor="Black"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center" />
 
                         <Label Text="{Binding Bio}"
                    FontSize="Medium"
+                   TextColor="Black"
                    HorizontalTextAlignment="Center" />
 
 
@@ -73,20 +75,20 @@
 
                                 <BoxView Grid.Row="0" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
                                 <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
-                                    <Label Text="Yasuo"></Label>
-                                    <Label Text="68% 2W/1L"></Label>
+                                    <Label Text="Yasuo" TextColor="Black"></Label>
+                                    <Label Text="68% 2W/1L" TextColor="Black"></Label>
                                 </StackLayout>
 
                                 <BoxView Grid.Row="1" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
                                 <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Start">
-                                    <Label Text="Yasuo"></Label>
-                                    <Label Text="68% 2W/1L"></Label>
+                                    <Label Text="Yasuo" TextColor="Black"></Label>
+                                    <Label Text="68% 2W/1L" TextColor="Black"></Label>
                                 </StackLayout>
 
                                 <BoxView Grid.Row="2" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
                                 <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
-                                    <Label Text="Yasuo"></Label>
-                                    <Label Text="68% 2W/1L"></Label>
+                                    <Label Text="Yasuo" TextColor="Black"></Label>
+                                    <Label Text="68% 2W/1L" TextColor="Black"></Label>
                                 </StackLayout>
 
                             </Grid>
