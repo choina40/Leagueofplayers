@@ -28,5 +28,9 @@ namespace League_of_players.Views
         {
             Navigation.PushAsync(new CreateTeamPage());
         }
+        void Profile_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new ProfilePage());
+        }
     }
 }

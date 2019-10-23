@@ -78,7 +78,24 @@
                         VerticalOptions="End"
                         Clicked="CreateTeam_Clicked"/>
                     </Grid>
-                </StackLayout>
+                        <Grid>
+                            <BoxView Color="White"
+                     WidthRequest="150"
+                     HeightRequest="150"></BoxView>
+                            <Label Margin="10, 20, 10, 10" Text="Profile"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"/>
+
+                            <Button Margin="10,10,0,10" Text="View"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        HorizontalOptions="Start"
+                        VerticalOptions="End"
+                        Clicked="Profile_Clicked"/>
+                            
+                        </Grid>
+                    </StackLayout>
 
             </ScrollView>
             </Grid>

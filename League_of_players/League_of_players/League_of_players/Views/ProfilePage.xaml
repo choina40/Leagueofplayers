@@ -7,9 +7,12 @@
              x:Class="League_of_players.Views.ProfilePage"
              xmlns:vm="clr-namespace:League_of_players.ViewModels"
              Title="{Binding Title}">
-                
-    
-    
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit"/>
+    </ContentPage.ToolbarItems>
+
+
     <ContentPage.BindingContext>
         <vm:ProfileViewModel />
     </ContentPage.BindingContext>

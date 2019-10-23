@@ -34,12 +34,12 @@
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" Route="home"/>
         </Tab>
-        <Tab Title="Profile" Icon="tab_about.png">
+        <!--<Tab Title="Profile" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}"  />
         </Tab>
         <Tab Title="Profile" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:TeamPage}" Route="team" />
-        </Tab>
+        </Tab>-->
     </TabBar>
 
     <!-- Optional Templates 
