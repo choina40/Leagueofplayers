@@ -2,7 +2,7 @@
 
 namespace League_of_players.Models
 {
-    public class Champion
+    public class Player
     {
         public string Name { get; set; }
         public string Ratio { get; set; }

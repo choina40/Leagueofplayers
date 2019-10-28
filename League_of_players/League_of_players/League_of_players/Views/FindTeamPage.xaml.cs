@@ -1,4 +1,5 @@
 ﻿using League_of_players.Models;
+using League_of_players.Repository;
 using League_of_players.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,18 +15,23 @@ namespace League_of_players.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FindTeamPage : ContentPage
     {
+        private TeamRepository teamRepository { get; set; }
+
         public List<Team> Teams { get; set; }
 
         public FindTeamPage()
         {
             InitializeComponent();
+            teamRepository = new TeamRepository(App.Database.database);
 
             FindTeamPageInit();
         }
 
         private async void FindTeamPageInit()
         {
-            var items = await App.mockDataStore.GetItemsAsync();
+            //var items = await App.mockDataStore.GetItemsAsync();
+
+            var items = await teamRepository.GetItemsAsync();
             Teams = items.ToList();
             BindingContext = this;
         }

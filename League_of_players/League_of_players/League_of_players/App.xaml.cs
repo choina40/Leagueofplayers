@@ -7,6 +7,8 @@ using League_of_players.Views;
 using System.Collections.Generic;
 using League_of_players.Models;
 using System.Linq;
+using League_of_players.Database;
+using League_of_players.Repository;
 
 namespace League_of_players
 {
@@ -21,6 +23,9 @@ namespace League_of_players
 
         public static MockDataStore mockDataStore { get; set; }
 
+        public static LeagueOfPlayersDB Database { get; private set; }
+
+
         public App()
         {
             InitializeComponent();
@@ -32,6 +37,12 @@ namespace League_of_players
             MainPage = new AppShell();
 
             mockDataStore = new MockDataStore();
+
+            Database = new LeagueOfPlayersDB(DependencyService.Get<IHelper>()
+                .GetLocalFilePath("LPSQLite.db3"));
+
+            //var rep = new TeamRepository(Database.database);
+            //rep.DeleteAllItemsAsync();
         }
 
 

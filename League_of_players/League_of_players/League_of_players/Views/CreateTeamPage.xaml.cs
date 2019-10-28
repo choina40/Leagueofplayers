@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using League_of_players.Models;
+using League_of_players.Repository;
 
 namespace League_of_players.Views
 {
@@ -14,6 +15,8 @@ namespace League_of_players.Views
     public partial class CreateTeamPage : ContentPage
     {
         public Item Item { get; set; }
+
+        private TeamRepository teamRepository { get; set; }
 
         public CreateTeamPage()
         {
@@ -25,6 +28,7 @@ namespace League_of_players.Views
                 Description = "This is an item description."
             };
 
+            teamRepository = new TeamRepository(App.Database.database);
             BindingContext = this;
         }
 
@@ -62,7 +66,7 @@ namespace League_of_players.Views
 
             if (validate)
             {
-                await App.mockDataStore.AddItemAsync(new Team
+                await teamRepository.SaveItemAsync(new Team
                 {
                     Name = Title.Text,
                     Description = Description.Text,
