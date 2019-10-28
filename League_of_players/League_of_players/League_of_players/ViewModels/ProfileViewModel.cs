@@ -4,6 +4,9 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using System.Net.Http;
+using Newtonsoft.Json;
+using League_of_players.Models;
 
 namespace League_of_players.ViewModels
 {
@@ -39,6 +42,31 @@ namespace League_of_players.ViewModels
             {
                 SetProperty(ref bio, value); //MvvmHelpers Implementation
                 OnPropertyChanged(nameof(Bio));
+            }
+        }
+        public async void GetChampions()
+        {
+            var client = new HttpClient();
+            var chaptions =  await client.GetAsync("URI");
+
+            if (chaptions.IsSuccessStatusCode)
+            {
+                var result = JsonConvert.DeserializeObject<List<Champion>>(await chaptions.Content.ReadAsStringAsync());
+            }
+        }
+        List<Champion> champs;
+        public MockChampion()
+        {
+            champs = new List<Champion>();
+            var mockChamps = new List<Champion>
+            {
+                new Team { Name = "ProTeam", Description="This is an item description.", Mode="Normal", Size = 3},
+                new Team { Name = "WeakTeam", Description="This is an item description.", Mode="ARAM", Size = 1}
+            };
+
+            foreach (var champ in mockChamps)
+            {
+                champs.Add(champ);
             }
         }
         // public Command NavButtonCommand { get; }
