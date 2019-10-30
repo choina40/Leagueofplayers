@@ -74,14 +74,14 @@
                                 </StackLayout>-->
 
 
-                                <ListView ItemsSource="{Binding Champion}">
+                                <ListView ItemsSource="{Binding Summoner}">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <StackLayout Padding="50, 0, 50, 5" Orientation="Horizontal">
                                                 <BoxView Color="{StaticResource Accent}"/>
                                                 <StackLayout>
                                                     <Label Text="{Binding Name}"/>
-                                                    <Label Text="{Binding Ratio}"/>
+                                                    <Label Text="{Binding AccountId}"/>
                                                 </StackLayout>
                                             </StackLayout>
                                         </DataTemplate>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using League_of_players.Models;
+using System.Diagnostics;
 
 namespace League_of_players.ViewModels
 {
@@ -44,31 +45,22 @@ namespace League_of_players.ViewModels
                 OnPropertyChanged(nameof(Bio));
             }
         }
-        public async void GetChampions()
+        List<Summoner> summoner = new List<Summoner>();
+
+        public async void GetSummoner()
         {
             var client = new HttpClient();
-            var chaptions =  await client.GetAsync("URI");
+            var fromAPI =  await client.GetAsync("https://oc1.api.riotgames.com/lol/summoner/v4/summoners/by-name/ItzMii?api_key=RGAPI-94cb6441-254e-4262-b938-d688aafee23e");
+            Debug.Write(fromAPI);
 
-            if (chaptions.IsSuccessStatusCode)
+            if (fromAPI.IsSuccessStatusCode)
             {
-                var result = JsonConvert.DeserializeObject<List<Champion>>(await chaptions.Content.ReadAsStringAsync());
-            }
-        }
-        List<Champion> champs;
-        public MockChampion()
-        {
-            champs = new List<Champion>();
-            var mockChamps = new List<Champion>
-            {
-                new Team { Name = "ProTeam", Description="This is an item description.", Mode="Normal", Size = 3},
-                new Team { Name = "WeakTeam", Description="This is an item description.", Mode="ARAM", Size = 1}
-            };
 
-            foreach (var champ in mockChamps)
-            {
-                champs.Add(champ);
+                summoner = JsonConvert.DeserializeObject<List<Summoner>>(await fromAPI.Content.ReadAsStringAsync());
             }
+
         }
+
         // public Command NavButtonCommand { get; }
         // async Task NavigateTo() => await Shell.Current.GoToAsync("///home");
 
