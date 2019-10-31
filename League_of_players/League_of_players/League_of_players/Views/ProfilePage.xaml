@@ -74,19 +74,19 @@
                                 </StackLayout>-->
 
 
-                                <ListView ItemsSource="{Binding Summoner}">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <StackLayout Padding="50, 0, 50, 5" Orientation="Horizontal">
-                                                <BoxView Color="{StaticResource Accent}"/>
-                                                <StackLayout>
-                                                    <Label Text="{Binding Name}"/>
-                                                    <Label Text="{Binding AccountId}"/>
-                                                </StackLayout>
+                            <ListView ItemsSource="{Binding Summoner}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Padding="50, 0, 50, 5" Orientation="Horizontal">
+                                        <BoxView Color="#2196F3"/>
+                                            <StackLayout>
+                                                <Label Text="{Binding Name}"/>
+                                                <Label Text="{Binding AccountId}"/>
                                             </StackLayout>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
 
 
 

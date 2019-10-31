@@ -45,7 +45,19 @@ namespace League_of_players.ViewModels
                 OnPropertyChanged(nameof(Bio));
             }
         }
-        List<Summoner> summoner = new List<Summoner>();
+        //List<Summoner> Summoner = new List<Summoner>();
+        public List<Summoner> Summoner = new List<Summoner> 
+        {
+                new Summoner {
+                    ProfileIconId = 588,
+                    Name= "ItzMii",
+                    Puuid= "XUKu-upbHC09t45gJDHANYP9BoGpFgXmUnMlI_MUjl_OQZWpbaOLYtTtpTqN9CPQPJs6qMyl-jwKYQ",
+                    SummonerLevel= 38,
+                    AccountId= "N9C-mGn8A-kulknl9Aovcb56PmpXvLCh92YB6e_HNOo3d_8",
+                    Id= "kgk5xlA8A5Orz3BJgi6SUfP-CGJGGTD-c9c1PXK8U5TU",
+                    RevisionDate= 1542627683000 }
+        };
+
 
         public async void GetSummoner()
         {
@@ -56,7 +68,7 @@ namespace League_of_players.ViewModels
             if (fromAPI.IsSuccessStatusCode)
             {
 
-                summoner = JsonConvert.DeserializeObject<List<Summoner>>(await fromAPI.Content.ReadAsStringAsync());
+                var summoner = JsonConvert.DeserializeObject<List<Summoner>>(await fromAPI.Content.ReadAsStringAsync());
             }
 
         }
