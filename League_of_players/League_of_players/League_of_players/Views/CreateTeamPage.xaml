@@ -11,8 +11,7 @@
                  >
              
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+        
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
