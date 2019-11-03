@@ -16,9 +16,27 @@ namespace League_of_players.Views
         {
             InitializeComponent();
         }
-        void Handle_Clicked(object sender, System.EventArgs e)
+        public static class Usernumber
         {
-            Navigation.PushAsync(new HomePage());
+            public static string Global1 = "User";
+        }
+        private async void Handle_Clicked(object sender, System.EventArgs e)
+        { 
+            if (loginusernameEntry.ToString() == "user1") 
+            {
+                Usernumber.Global1 = loginusernameEntry.ToString();
+                await Navigation.PushAsync(new HomePage()); 
+            }
+            else if (loginusernameEntry.ToString() == "user2")
+            {
+                Usernumber.Global1 = loginusernameEntry.ToString();
+                await Navigation.PushAsync(new SignUpPage());
+            }
+            else 
+            {
+                await DisplayAlert ("Wrong username", "Please enter user1 or user2", "OK");
+            }
+            
         }
         void SignUp_Clicked(object sender, System.EventArgs e)
         {
