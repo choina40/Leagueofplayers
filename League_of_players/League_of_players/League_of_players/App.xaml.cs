@@ -42,6 +42,7 @@ namespace League_of_players
             //var rep = new TeamRepository(Database.database);
             //rep.DeleteAllItemsAsync();
         }
+        
 
 
         protected override void OnStart()

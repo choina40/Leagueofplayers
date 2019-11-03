@@ -23,9 +23,9 @@
             
             <StackLayout Spacing="20" Padding="16,40,16,40">
                 <Label Text="Username" TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
-                <Entry x:Name="loginusernameEntry"  />
+                <Entry x:Name="LoginusernameEntry" Text="{Binding LoginusernameEntry}" />
                 <Label Text="Password"  TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
-                <Entry x:Name="loginpasswordEntry" IsPassword="true" />
+                <Entry x:Name="LoginpasswordEntry" IsPassword="true" />
                 <Button Text="Login" TextColor="Black" Clicked="Handle_Clicked" />
                 <Label x:Name="loginmessageLabel"  TextColor="Black" FontAttributes ="Bold" FontSize="Title"/>
             </StackLayout>
