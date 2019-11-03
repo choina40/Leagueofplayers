@@ -25,6 +25,7 @@ namespace League_of_players
 
         public static LeagueOfPlayersDB Database { get; private set; }
 
+        public static string username { get; set; }
 
         public App()
         {

@@ -16,20 +16,19 @@ namespace League_of_players.Views
         {
             InitializeComponent();
         }
-        public static class Usernumber
-        {
-            public static string Global1 = "User";
-        }
+        
         private async void Handle_Clicked(object sender, System.EventArgs e)
         { 
             if (loginusernameEntry.Text == "user1") 
             {
-                Usernumber.Global1 = loginusernameEntry.ToString();
+                App.username = "Dragonslayer32";
+                
                 await Navigation.PushAsync(new HomePage()); 
             }
             else if (loginusernameEntry.Text == "user2")
             {
-                Usernumber.Global1 = loginusernameEntry.ToString();
+                App.username = "Nagune";
+                
                 await Navigation.PushAsync(new SignUpPage());
             }
             else 

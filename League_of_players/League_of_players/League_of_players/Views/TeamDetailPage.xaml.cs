@@ -18,6 +18,7 @@ namespace League_of_players.Views
             InitializeComponent();
 
             TeamName.Text = team.Name;
+            Master.Text = team.TeamMaster;
             TeamDescription.Text = team.Description;
             Mode.Text = team.Mode;
             MinTier.Text = team.MinTier;

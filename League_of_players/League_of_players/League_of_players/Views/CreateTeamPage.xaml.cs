@@ -69,6 +69,7 @@ namespace League_of_players.Views
                 await teamRepository.SaveItemAsync(new Team
                 {
                     Name = Title.Text,
+                    TeamMaster = App.username,
                     Description = Description.Text,
                     Mode = Mode.SelectedItem.ToString(),
                     Size = 1,

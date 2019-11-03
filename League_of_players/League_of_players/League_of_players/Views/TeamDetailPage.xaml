@@ -27,8 +27,14 @@
                    FontSize="20"
                    Grid.Row="0"
                    FontAttributes="Bold"/>
-
-                <StackLayout Grid.Row="1">
+                <Label x:Name="Master"
+                       VerticalTextAlignment="Start"
+                       HorizontalTextAlignment="Start"
+                       FontSize="20"
+                       Grid.Row="1"
+                       FontAttributes="Bold"/>
+                
+                <StackLayout Grid.Row="2">
                     <Label Text="Description"
                    VerticalTextAlignment="Start" 
                    HorizontalTextAlignment="Start" 
@@ -45,7 +51,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="2">
+                <StackLayout Grid.Row="3">
                     <Label Text="Mode"
                    VerticalTextAlignment="Start" 
                    HorizontalTextAlignment="Start" 
@@ -62,7 +68,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="3">
+                <StackLayout Grid.Row="4">
                     <Label Text="Minimum Tier"
                    VerticalTextAlignment="Start" 
                    HorizontalTextAlignment="Start" 
@@ -79,7 +85,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="4">
+                <StackLayout Grid.Row="5">
                     <Label Text="Maximum Tier"
                    VerticalTextAlignment="Start" 
                    HorizontalTextAlignment="Start" 
@@ -89,7 +95,7 @@
                    TextColor="Black"/>
 
                     <Label x:Name="MaxTier"
-                   Grid.Row="4"
+                   Grid.Row="5"
                    VerticalTextAlignment="Start" 
                    HorizontalTextAlignment="Start" 
                    FontSize="15"
