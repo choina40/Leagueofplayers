@@ -22,12 +22,12 @@ namespace League_of_players.Views
         }
         private async void Handle_Clicked(object sender, System.EventArgs e)
         { 
-            if (loginusernameEntry.ToString() == "user1") 
+            if (loginusernameEntry.Text == "user1") 
             {
                 Usernumber.Global1 = loginusernameEntry.ToString();
                 await Navigation.PushAsync(new HomePage()); 
             }
-            else if (loginusernameEntry.ToString() == "user2")
+            else if (loginusernameEntry.Text == "user2")
             {
                 Usernumber.Global1 = loginusernameEntry.ToString();
                 await Navigation.PushAsync(new SignUpPage());
