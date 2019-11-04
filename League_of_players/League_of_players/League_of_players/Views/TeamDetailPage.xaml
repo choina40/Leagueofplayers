@@ -102,6 +102,27 @@
                    TextColor="Black"/>
                 </StackLayout>
 
+
+                <StackLayout Grid.Row="6">
+                    <Button Text="Join Team!"
+                        Font="Large"
+                        BorderWidth="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"/>
+
+                    <Button Text="Leave Team!"
+                        Font="Large"
+                        BorderWidth="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"/>
+
+
+
+                </StackLayout>
+                
+                
+                
+
             </Grid>
         </Grid>
     </ContentPage.Content>
