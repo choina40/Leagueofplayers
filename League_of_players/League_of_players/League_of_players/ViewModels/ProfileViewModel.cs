@@ -22,9 +22,7 @@ namespace League_of_players.ViewModels
 
         }
 
-        string name = "DragonSlayer32";
-
-       
+        string name = App.username;
 
         public string Name
         {
@@ -35,6 +33,8 @@ namespace League_of_players.ViewModels
                 OnPropertyChanged(nameof(Name));
             }
         }
+
+        
         string bio = "Bio: I am a good player who steals kills";
         public string Bio
         {
@@ -45,8 +45,7 @@ namespace League_of_players.ViewModels
                 OnPropertyChanged(nameof(Bio));
             }
         }
-        //List<Summoner> Summoner = new List<Summoner>();
-        public List<Summoner> Summoner = new List<Summoner> 
+        List<Summoner> summoner = new List<Summoner> 
         {
                 new Summoner {
                     ProfileIconId = 588,
@@ -57,6 +56,18 @@ namespace League_of_players.ViewModels
                     Id= "kgk5xlA8A5Orz3BJgi6SUfP-CGJGGTD-c9c1PXK8U5TU",
                     RevisionDate= 1542627683000 }
         };
+
+        //Matches
+        //{
+        //    "lane": "TOP",
+        //    "gameId": 224906972,
+        //    "champion": 103,
+        //    "platformId": "OC1",
+        //    "timestamp": 1542626006352,
+        //    "queue": 450,
+        //    "role": "DUO_SUPPORT",
+        //    "season": 12
+        //},
 
 
         public async void GetSummoner()

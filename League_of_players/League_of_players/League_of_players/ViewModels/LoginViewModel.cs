@@ -40,7 +40,7 @@ namespace League_of_players.ViewModels
         {
             if (LoginusernameEntry == "user1")
             {
-                App.username = "Dragonslayer32";
+                App.username = "Dragonslayer31";
 
                 App.Current.MainPage.Navigation.PushAsync(new HomePage());
             }
@@ -48,7 +48,7 @@ namespace League_of_players.ViewModels
             {
                 App.username = "Nagune";
 
-                App.Current.MainPage.Navigation.PushAsync(new SignUpPage());
+                App.Current.MainPage.Navigation.PushAsync(new HomePage());
             }
             else
             {

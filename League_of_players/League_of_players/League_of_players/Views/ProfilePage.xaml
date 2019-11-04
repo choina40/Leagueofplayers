@@ -67,14 +67,43 @@
 
 
 
-                                <!--<BoxView Grid.Row="0" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
+                            <Grid RowSpacing="10" ColumnSpacing="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <BoxView Grid.Row="0" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
                                 <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
+                                    <Label Text="Akali" TextColor="Black"></Label>
+                                    <Label Text="33% 1W/2L" TextColor="Black"></Label>
+                                </StackLayout>
+
+                                <BoxView Grid.Row="1" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
+                                <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Start">
                                     <Label Text="Yasuo" TextColor="Black"></Label>
                                     <Label Text="68% 2W/1L" TextColor="Black"></Label>
-                                </StackLayout>-->
+                                </StackLayout>
+
+                                <BoxView Grid.Row="2" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
+                                <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
+                                    <Label Text="Teemo" TextColor="Black"></Label>
+                                    <Label Text="100% 3W/0L" TextColor="Black"></Label>
+                                </StackLayout>
+                                <BoxView Grid.Row="3" Grid.Column="0" Color="{StaticResource Accent}" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start"></BoxView>
+                                <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Start">
+                                    <Label Text="Jax" TextColor="Black"></Label>
+                                    <Label Text="80% 4W/1L" TextColor="Black"></Label>
+                                </StackLayout>
+                            </Grid>
 
 
-                            <ListView ItemsSource="{Binding Summoner}">
+                            <!--<ListView ItemsSource="{Binding Summoner}">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <StackLayout Padding="50, 0, 50, 5" Orientation="Horizontal">
@@ -86,8 +115,8 @@
                                         </StackLayout>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
-                            </ListView>
-
+                            </ListView>-->
+                                
 
 
                         </StackLayout>

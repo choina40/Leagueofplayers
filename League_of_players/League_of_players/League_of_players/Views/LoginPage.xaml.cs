@@ -22,23 +22,20 @@ namespace League_of_players.Views
         
         private void Handle_Clicked(object sender, System.EventArgs e)
         { 
-            if (LoginusernameEntry.Text == "user1") 
+            if (LoginusernameEntry.Text != "")
             {
-                App.username = "Dragonslayer32";
-                
-                Navigation.PushAsync(new HomePage()); 
+                App.username = LoginusernameEntry.Text;
+
+                Navigation.PushAsync(new HomePage());
             }
-            else if (LoginusernameEntry.Text == "user2")
+            else
             {
-                App.username = "Nagune";
-                
-                Navigation.PushAsync(new SignUpPage());
+                DisplayAlert("Wrong username", "Please enter a username", "OK");
+
             }
-            else 
-            {
-                DisplayAlert ("Wrong username", "Please enter user1 or user2", "OK");
-            }
-            
+
+
+
         }
         void SignUp_Clicked(object sender, System.EventArgs e)
         {

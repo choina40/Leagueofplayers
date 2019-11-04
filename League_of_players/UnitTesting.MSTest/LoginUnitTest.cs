@@ -11,7 +11,6 @@ namespace UnitTesting.MSTest
         {
             var vm = new LoginViewModel();
 
-            vm.
         }
     }
 }
