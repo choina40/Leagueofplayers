@@ -11,6 +11,11 @@ namespace UnitTesting.MSTest
         {
             var vm = new LoginViewModel();
 
+            vm.LoginusernameEntry = user1;
+
+            vm.LoginCommand.Execute(null);
+
+            Assert.IsTrue(App.username == "user1","username is user1")
         }
     }
 }
